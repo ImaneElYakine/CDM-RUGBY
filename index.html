@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:x-transition="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" name="viewport">
+    <title>Installation</title>
+    <link rel="icon" href="img/favicon_mediametrie.png" />
+    <link rel="stylesheet" href="css/output.css">
+</head>
+
+<body class="bg-white font-mediametrie">
+<!-- The Modal -->
+<div id="myModal" class="modal">
+    <div class="modal-content w-4/5 md:w-2/5 md:mt-12">
+        <!-- Modal content -->
+        <div class="relative bg-white ">
+            <!-- Modal header -->
+            <div class="flex items-start justify-between p-4 border-b">
+                <h3 class="text-xl font-semibold text-gray-900 ">
+                    Terms of Service
+                </h3>
+            </div>
+            <!-- Modal body -->
+            <div class="p-6 space-y-6">
+                <p class="text-base leading-relaxed text-gray-500">
+                    With less than a month to go before the European Union enacts new consumer privacy laws for its citizens, companies around the world are updating their terms of service agreements to comply.
+                </p>
+                <p class="text-base leading-relaxed text-gray-500">
+                    The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May 25 and is meant to ensure a common set of data rights in the European Union. It requires organizations to notify users as soon as possible of high-risk data breaches that could personally affect them.
+                </p>
+                <p class="text-base leading-relaxed text-gray-500">
+                    The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May 25 and is meant to ensure a common set of data rights in the European Union. It requires organizations to notify users as soon as possible of high-risk data breaches that could personally affect them.
+                </p>
+            </div>
+            <!-- Modal footer -->
+            <div class="flex items-center p-6 space-x-2 border-t border-gray-200">
+                <button onclick="hideModal()" type="button" class="text-white bg-fushia hover:bg-dark-fushia focus:ring-4 font-medium text-sm px-5 py-2.5 text-center focus:ring-gray-300">I accept</button>
+                <button onclick="hideModal()" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-300  border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10">Decline</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div  class="w-full flex flex-wrap">
+    <!-- Image Section -->
+    <div id="image-bg" class="hidden md:block md:w-1/2" style="background: url('img/background.png') 25% 75%; background-size: cover; min-height: 80vh;">
+
+    </div>
+
+    <!-- Login Section -->
+    <div class="w-full md:w-1/2 flex flex-col">
+        <div class="flex justify-center md:justify-center lg:pt-4 md:pt-2">
+            <a href="https://www.mediametrie.fr/fr" target="_blank">
+                <img alt="" class="lg:w-36 md:w-24 w-32" src="img/logo_mediametrie.png">
+            </a>
+        </div>
+        <img src="img/cercle-left.svg" class="hidden md:block absolute top-16 md:w-18 lg:w-24" alt="">
+        <img src="img/cercle-top.svg" class="hidden md:block absolute right-0 md:h-16 lg:h-24" alt="">
+        <div class=" flex flex-col items-center justify-center my-auto  lg:pt-9 pt-8 md:pt-0 px-4 md:px-12 lg:px-24">
+            <p class="font-bold text-center text-lg md:textv-xl lg:text-2xl">Bienvenue dans le panel internet</p>
+
+            <a href="#" target="_blank" class="mt-12 text-white font-bold lg:text-lg bg-fushia hover:bg-dark-fushia focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium px-5 py-2.5 md:px-12 md:py-2.5 text-center inline-flex items-center">
+                <span>1er pas - <br>Créer mon compte paneliste</span>
+                <img src="img/icon-fleche.svg" class="w-10 h-10 ml-6 -mr-1" alt="">
+            </a>
+            <p class=" text-center text-lg md:text-lg lg:text-xl mt-16 md:mt-18 md:mb-4 mb-2">Sélectionnez une notice</p>
+
+            <div class="md:flex text-center mb-4">
+                <a href="#" target="_blank" class="md:m-2 m-6 block md:w-2/5 md:p-6 px-24 py-4 bg-white border border-vert hover:bg-gray-100">
+                    <img src="img/icon-desktop.svg" class="w-auto md:h-20 h-14 mx-auto" alt="">
+                    <p class="font-bold text-vert mt-2">Ordinateur</p>
+                </a>
+                <a href="#" target="_blank" class="md:m-2 m-6 block md:w-2/5 md:p-6 px-24 py-4 bg-white border border-fushia  hover:bg-gray-100">
+                    <img src="img/icon-tablette.svg" class="w-auto md:h-20 h-14 mx-auto" alt="">
+                    <p class="font-bold text-fushia mt-2">Tablette</p>
+                </a>
+                <a href="#" target="_blank" class="md:m-2 m-6 block md:w-2/5 md:p-6 px-24 py-4 bg-white border border-bleu  hover:bg-gray-100">
+                    <img src="img/icon-smartphone.svg" class="w-auto md:h-20 h-14 mx-auto" alt="">
+                    <p class="font-bold text-bleu mt-2">Mobile</p>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<div id="footer" class="bg-vert mt-8 md:mt-0">
+    <div class="max-w-2xl mx-auto text-white py-2">
+        <div class="text-center flex justify-center mt-2">
+            <img alt="" class="lg:w-28 md:w-24 w-24 mx-auto" src="img/logo_mediametrie_blanc.png">
+        </div>
+        <div class="text-center text-sm md:text-base md:px-0 px-16">
+            <p> Référence de la mesure d’audience des médias en France </p>
+        </div>
+        <div class=" flex flex-col  items-center text-sm">
+            <div class="order-1 ">
+                <a href="mailto:panel@mediametrie.fr"><span class="px-2">panel@mediametrie.fr</span></a>
+                <span class="px-2 border-l">0.800.227.000</span>
+            </div>
+        </div>
+        <div class=" flex flex-col md:flex-row md:justify-between items-center text-sm mt-8 md:mt-4">
+            <p class="order-2 md:order-1"> &copy; Médiamétrie, 2022. </p>
+            <div class="order-1 md:order-2">
+                <a href="" target="_blank"><span class="px-2">Mentions légales</span></a>
+                <a href="" target="_blank"><span class="px-2 border-l">C.G.U</span></a>
+                <span class="px-2 border-l hover:cursor-pointer" onclick="displayModal()">Cookies</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://unpkg.com/flowbite@1.4.4/dist/flowbite.js"></script>
+<script src="script.js"></script>
+</body>
+
+</html>
