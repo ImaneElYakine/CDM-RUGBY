@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'Mediametrie';
+    src: url("/Mediametrie.ttf");
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    font-family: 'Mediametrie', sans-serif;
+    background: url("/img/background.svg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+::selection {
+    background: none;
+}
+/* For Mozilla Firefox */
+::-moz-selection {
+    background: none;
+}
+
+
+
+.move-pointer {
+    cursor: pointer;
+}
+
+.move-pointer:hover {
+    background-color: darkgrey;
+}
