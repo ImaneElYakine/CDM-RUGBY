@@ -662,6 +662,10 @@ video {
   border-radius: 9999px;
 }
 
+.border-b {
+  border-bottom-width: 1px;
+}
+
 .bg-gray-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(17 24 39 / var(--tw-bg-opacity));
@@ -716,6 +720,10 @@ video {
 
 .pl-2 {
   padding-left: 0.5rem;
+}
+
+.pb-4 {
+  padding-bottom: 1rem;
 }
 
 .text-center {
