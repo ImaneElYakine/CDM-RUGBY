@@ -6,15 +6,23 @@ toggleBtn.onclick = () => {
     collapse.classList.toggle("flex");
 };
 
-// Elements et création des listes
-const groupeA = document.getElementById('groupeA');
-const sortableA = new Sortable(groupeA, { disabled: true});
-const groupeB = document.getElementById('groupeB');
-const sortableB = new Sortable(groupeB, { disabled: true});
-const groupeC = document.getElementById('groupeC');
-const sortableC = new Sortable(groupeC, { disabled: true});
-const groupeD = document.getElementById('groupeD');
-const sortableD = new Sortable(groupeD, { disabled: true});
+// Création des listes de poules
+let groupeA = $("#groupeA");
+groupeA.sortable({
+    disabled: true
+});
+let groupeB = $("#groupeB");
+groupeB.sortable({
+    disabled: true
+});
+let groupeC = $("#groupeC");
+groupeC.sortable({
+    disabled: true
+});
+let groupeD = $("#groupeD");
+groupeD.sortable({
+    disabled: true
+});
 let modeModification = false;
 
 // Boutons pour la modification
@@ -35,10 +43,10 @@ function modifier(){
         document.getElementById('btn-icon').classList.add("hidden");
         document.getElementById("darken").classList.remove("hidden");
         // On active le tri par drag and drop
-        sortableA.option("disabled", false);
-        sortableB.option("disabled", false);
-        sortableC.option("disabled", false);
-        sortableD.option("disabled", false);
+        groupeA.sortable( "option", "disabled", false );
+        groupeB.sortable( "option", "disabled", false );
+        groupeC.sortable( "option", "disabled", false );
+        groupeD.sortable( "option", "disabled", false );
     }
 
     else if (modeModification === true) {
@@ -53,10 +61,10 @@ function modifier(){
         document.getElementById("darken").classList.add("hidden");
         document.getElementById('btn-icon').classList.remove("hidden");
         // On désactive le tri par drag and drop
-        sortableA.option("disabled", true);
-        sortableB.option("disabled", true);
-        sortableC.option("disabled", true);
-        sortableD.option("disabled", true);
+        groupeA.sortable( "option", "disabled", true );
+        groupeB.sortable( "option", "disabled", true );
+        groupeC.sortable( "option", "disabled", true );
+        groupeD.sortable( "option", "disabled", true );
     }
 }
 
