@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:x-transition="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" name="viewport">
+    <title>Phase finale</title>
+    <link href="img/favicon_mediametrie.png" rel="icon"/>
+    <link href="css/output.css" rel="stylesheet">
+</head>
+
+<body class=" font-mediametrie">
+<div class="fixed w-full h-full bg-gray-900 opacity-70 z-0 hidden" id="darken"></div>
+<!-- HEADER -->
+<nav class=" md:bg-transparent py-2 md:py-4 text-white">
+    <div class=" container px-4 mx-auto md:flex md:items-center">
+        <div class="flex justify-between items-center">
+            <a class="font-bold text-xl text-indigo-600" href="#">
+                <img class="w-32" src="img/logo-blanc-mm.png" alt="Médiamétrie">
+            </a>
+            <button class="md:hidden" id="navbar-toggle">
+                Icon
+            </button>
+        </div>
+        <div class="hidden md:flex flex-col md:flex-row md:ml-auto mt-3 md:mt-0" id="navbar-collapse">
+            <a class="p-2 lg:px-4 md:mx-2 text-red-500 font-bold" href="#">En ce moment</a>
+            <a class="p-2 lg:px-4 md:mx-2 transition-colors duration-300" href="#">Matchs passés</a>
+            <a class="p-2 lg:px-4 md:mx-2 transition-colors duration-300" href="#">Classement</a>
+            <a class="p-2 lg:px-4 md:mx-2 transition-colors duration-300" href="#">Bonus</a>
+            <a class="p-2 lg:px-4 md:mx-2 transition-colors duration-300" href="#">Règles du jeu</a>
+        </div>
+    </div>
+</nav>
+
+<!-- -->
+<div class="text-white flex justify-center items-center mb-10">
+    <div>
+        <p class="font-bold py-2">Phase finale</p>
+        Vous devez valider vos pronostics au maximum 30 minutes avant le début du match d’ouverture de la
+        compétition.<br/>
+        Vous obtiendrez un score en fonction de vos prédictions et pourrez continuer à donner vos pronostics pour la
+        suite de la compétition.
+    </div>
+</div>
+<!-- POULES -->
+<div class="flex justify-center">
+    <div class="flex grid grid-rows-3 grid-cols-2 z-50 bg-white">
+        <div class="col-span-2 flex items-center justify-center border-b">
+            QUART DE FINALE
+        </div>
+        <div class="p-5 flex items-center justify-center grid grid-cols-7 bg-gray-100">
+            <img class="w-12 h-12 rounded-full" src="img/drapeaux/France.png">
+            <div>France</div>
+            <input type="tel" class="border border-gray-300 text-gray-900 w-10">
+            <div class="text-center">VS</div>
+            <input type="tel" class="border border-gray-300 text-gray-900 w-10">
+            <div>France</div>
+            <img class="w-12 h-12 rounded-full" src="img/drapeaux/France.png">
+        </div>
+        <div class="p-5  flex items-center justify-center">
+            content
+        </div>
+        <div class="p-5 flex items-center justify-center">
+            image
+        </div>
+        <div class="p-5  flex items-center justify-center">
+            content
+        </div>
+    </div>
+</div>
+<!-- BOUTONS MODIFICATION -->
+<div class="flex justify-center mt-8">
+    <button id="btn-modifier" class="bg-gray-100 font-bold py-2 px-4 inline-flex items-center z-50">
+        <img src="./img/icon-modif.svg" id="btn-icon" class="w-6 h-6 mr-2">
+        <span id="btn-text">Modifier</span>
+    </button>
+</div>
+
+
+
+<script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+<script src="https://unpkg.com/flowbite@1.4.4/dist/flowbite.js"></script>
+<script src="script.js"></script>
+</body>
+
+</html>
