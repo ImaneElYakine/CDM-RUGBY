@@ -16,20 +16,6 @@ html {
     background-size: cover;
 }
 
-::selection {
-    background: none;
-}
-/* For Mozilla Firefox */
-::-moz-selection {
-    background: none;
-}
-
-
-
-.move-pointer {
-    cursor: pointer;
-}
-
-.move-pointer:hover {
-    background-color: darkgrey;
+input, textarea {
+    background-color: #d0d0d0;
 }
