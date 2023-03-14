@@ -104,9 +104,31 @@ function modifierFinale() {
     }
 }
 
+// Fonction pour l'affichage des résultats finaux
+let resultatPoules = document.getElementById("btn-resultat-poules");
+let resultatFinale = document.getElementById("btn-resultat-finale");
+resultatPoules.addEventListener("click", afficheResultatsPoules);
+resultatFinale.addEventListener("click", afficheResultatsFinale);
 
+function afficheResultatsPoules(){
+    resultatPoules.classList.add("font-bold");
+    resultatPoules.classList.add("underline");
+    resultatFinale.classList.remove("font-bold");
+    resultatFinale.classList.remove("underline");
+    document.getElementById("resultat-poules").classList.remove("hidden");
+    document.getElementById("resultat-finale").classList.add("hidden");
+    resultatFinale.classList.remove("text-red-500");
+    resultatPoules.classList.add("text-red-500");
+}
 
-// Fonction animation validation des modifications
-function animationModification(){
+function afficheResultatsFinale(){
+    resultatPoules.classList.remove("font-bold");
+    resultatPoules.classList.remove("text-red-500");
+    resultatFinale.classList.add("text-red-500");
+    resultatPoules.classList.remove("underline");
+    resultatFinale.classList.add("font-bold");
+    resultatFinale.classList.add("underline");
+    document.getElementById("resultat-poules").classList.add("hidden");
+    document.getElementById("resultat-finale").classList.remove("hidden");
 
 }
