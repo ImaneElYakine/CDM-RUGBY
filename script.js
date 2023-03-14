@@ -26,11 +26,18 @@ groupeD.sortable({
 let modeModification = false;
 
 // Boutons pour la modification
-const btnModifier = document.getElementById('btn-modifier');
-btnModifier.addEventListener('click', modifier);
+const btnModifierPoule = document.getElementById('btn-modifier-poule');
+if(btnModifierPoule){
+    btnModifierPoule.addEventListener('click', modifierPoule);
+}
+
+const btnModifierFinale = document.getElementById('btn-modifier-finale');
+if(btnModifierFinale){
+    btnModifierFinale.addEventListener('click', modifierFinale);
+}
 
 // Fonction pour l'ordre des poules
-function modifier(){
+function modifierPoule(){
     if (modeModification === false) {
         modeModification = true;
         // Affichage
@@ -67,6 +74,37 @@ function modifier(){
         groupeD.sortable( "option", "disabled", true );
     }
 }
+
+function modifierFinale() {
+    if (modeModification === false) {
+        modeModification = true;
+        // Affichage
+        document.getElementById('btn-text').innerHTML = 'Valider';
+        document.getElementById('btn-icon').classList.add("hidden");
+        document.getElementById("darken").classList.remove("hidden");
+        const score = document.getElementsByClassName("score");
+        for (let index = 0; index < score.length; index++) {
+            score[index].disabled = false;
+            score[index].style.backgroundColor = "#FFFFFF";
+            score[index].style.border = "solid 1px #d0d0d0";
+        }
+    }
+    else if (modeModification === true) {
+        modeModification = false;
+        // Affichage
+        document.getElementById('btn-text').innerHTML = 'Modifier';
+        document.getElementById("darken").classList.add("hidden");
+        document.getElementById('btn-icon').classList.remove("hidden");
+        const score = document.getElementsByClassName("score");
+        for (let index = 0; index < score.length; index++) {
+            score[index].disabled = true;
+            score[index].style.backgroundColor = "#d0d0d0";
+            score[index].style.border = "none";
+        }
+    }
+}
+
+
 
 // Fonction animation validation des modifications
 function animationModification(){
