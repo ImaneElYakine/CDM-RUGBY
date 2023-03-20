@@ -1,7 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    'poules.html', 'finale.html', 'matchs-passés.html', 'classement.html'
+    'poules.html', 'finale.html', 'matchs-passés.html', 'classement.html', 'bonus.html',
+    "./src/**/*.{html,js}",
+    "./node_modules/tw-elements/dist/js/**/*.js"
   ],
   theme: {
     extend: {
@@ -21,5 +23,5 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [require("tw-elements/dist/plugin")]
 }

@@ -9,19 +9,27 @@ toggleBtn.onclick = () => {
 // Création des listes de poules
 let groupeA = $("#groupeA");
 groupeA.sortable({
-    disabled: true
+    disabled: true,
+    cursor: "move",
+    placeholder: "sortable-placeholder"
 });
 let groupeB = $("#groupeB");
 groupeB.sortable({
-    disabled: true
+    disabled: true,
+    cursor: "move",
+    placeholder: "sortable-placeholder"
 });
 let groupeC = $("#groupeC");
 groupeC.sortable({
-    disabled: true
+    disabled: true,
+    cursor: "move",
+    placeholder: "sortable-placeholder"
 });
 let groupeD = $("#groupeD");
 groupeD.sortable({
-    disabled: true
+    disabled: true,
+    cursor: "move",
+    placeholder: "sortable-placeholder"
 });
 let modeModification = false;
 
@@ -36,15 +44,19 @@ if(btnModifierFinale){
     btnModifierFinale.addEventListener('click', modifierFinale);
 }
 
-// Fonction pour l'ordre des poules
+const btnModifierBonus = document.getElementById('btn-modifier-bonus');
+if(btnModifierBonus){
+    btnModifierBonus.addEventListener('click', modifierBonus);
+}
+
+// Fonctions pour la modification
 function modifierPoule(){
     if (modeModification === false) {
         modeModification = true;
         // Affichage
         const pays = document.getElementsByClassName("pays");
         for (let index = 0; index < pays.length; index++) {
-            pays[index].classList.add('hover:bg-gray-200');
-            pays[index].classList.add('move-pointer');
+
         }
         document.getElementById('btn-text').innerHTML = 'Valider';
         document.getElementById('btn-icon').classList.add("hidden");
@@ -61,8 +73,7 @@ function modifierPoule(){
         // Affichage
         const pays = document.getElementsByClassName("pays");
         for (let index = 0; index < pays.length; index++) {
-            pays[index].classList.remove('hover:bg-gray-200');
-            pays[index].classList.remove('move-pointer');
+
         }
         document.getElementById('btn-text').innerHTML = 'Modifier';
         document.getElementById("darken").classList.add("hidden");
@@ -104,6 +115,31 @@ function modifierFinale() {
     }
 }
 
+function modifierBonus() {
+    if (modeModification === false) {
+        modeModification = true;
+        // Affichage
+        document.getElementById('btn-text').innerHTML = 'Valider';
+        document.getElementById('btn-icon').classList.add("hidden");
+        document.getElementById("darken").classList.remove("hidden");
+        const bonus = document.getElementsByClassName("bonus");
+        for (let index = 0; index < bonus.length; index++) {
+            bonus[index].disabled = false;
+        }
+    }
+    else if (modeModification === true) {
+        modeModification = false;
+        // Affichage
+        document.getElementById('btn-text').innerHTML = 'Modifier';
+        document.getElementById("darken").classList.add("hidden");
+        document.getElementById('btn-icon').classList.remove("hidden");
+        const bonus = document.getElementsByClassName("bonus");
+        for (let index = 0; index < bonus.length; index++) {
+            bonus[index].disabled = true;
+        }
+    }
+}
+
 // Fonction pour l'affichage des résultats finaux
 let resultatPoules = document.getElementById("btn-resultat-poules");
 let resultatFinale = document.getElementById("btn-resultat-finale");
@@ -130,5 +166,17 @@ function afficheResultatsFinale(){
     resultatFinale.classList.add("underline");
     document.getElementById("resultat-poules").classList.add("hidden");
     document.getElementById("resultat-finale").classList.remove("hidden");
-
 }
+
+// Selection de 4 équipes maximum pour le bonus demi-finale
+const bonusDemi = document.getElementById("bonus-demi");
+console.log(bonusDemi);
+
+bonusDemi.addEventListener('change', (event) => {
+    const selectedOptions = Array.from(bonusDemi.selectedOptions);
+    if (selectedOptions.length > 4) {
+        // prevent the selection of additional options
+        alert("test");
+        this.value = ""; // reset the selected options
+    }
+});
