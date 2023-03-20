@@ -19,3 +19,8 @@ html {
 input, textarea {
     background-color: #d0d0d0;
 }
+
+.sortable-placeholder {
+    background-color: lightgrey;
+    height: 50px;
+}
