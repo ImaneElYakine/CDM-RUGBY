@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" name="viewport">
     <title>Phase finale</title>
-    <link href="img/favicon_mediametrie.png" rel="icon"/>
+    <link rel="icon" type="image/png" href="/img/favicon_mediametrie.png" />
     <link href="css/output.css" rel="stylesheet">
 </head>
 
@@ -24,7 +24,7 @@
         <div class="hidden md:flex flex-col md:flex-row md:ml-auto mt-3 md:mt-0" id="navbar-collapse">
             <a class="p-2 lg:px-4 md:mx-2 text-red-500 font-bold" href="finale.html">En ce moment</a>
             <a class="p-2 lg:px-4 md:mx-2 transition-colors duration-300" href="matchs-passés.html">Matchs passés</a>
-            <a class="p-2 lg:px-4 md:mx-2 transition-colors duration-300" href="#">Classement</a>
+            <a class="p-2 lg:px-4 md:mx-2 transition-colors duration-300" href="classement.html">Classement</a>
             <a class="p-2 lg:px-4 md:mx-2 transition-colors duration-300" href="#">Bonus</a>
             <a class="p-2 lg:px-4 md:mx-2 transition-colors duration-300" href="#">Règles du jeu</a>
         </div>
@@ -48,7 +48,7 @@
             QUART DE FINALE
         </div>
         <div class="flex items-center justify-center">
-            <div class="text-gray-900 grid grid-cols-7 grid-rows-2 m-5 p-5">
+            <div class="text-gray-900 grid grid-cols-7 grid-rows-3 m-5 p-5">
                 <div class="flex justify-center items-center">
                     <img class="w-12 h-12 rounded-full" src="img/drapeaux/France.png" alt="">
                 </div>
@@ -76,6 +76,9 @@
                 </div>
                 <div class="flex justify-center items-center col-span-7 text-sm">
                     <div>Samedi 27 juin - 18h</div>
+                </div>
+                <div class="flex justify-center col-span-7">
+                   test
                 </div>
             </div>
         </div>
@@ -178,15 +181,25 @@
     </div>
 </div>
 
+<!-- CGU/Mentions légales -->
+<footer class="mt-6 z-0">
+    <div class="w-full mx-auto container md:p-6 p-4 md:flex md:items-center md:justify-between">
+      <span class="text-sm text-white sm:text-center opacity-80">© 2023 <a target="_blank" href="https://www.mediametrie.fr/fr" class="hover:underline">Médiamétrie</a>
+    </span>
+        <ul class="flex flex-wrap items-center mt-3 text-sm text-white opacity-80 sm:mt-0">
+            <li>
+                <a href="#" class="mr-4 hover:underline md:mr-6 ">Cookies</a>
+            </li>
+            <li>
+                <a href="#" class="mr-4 hover:underline md:mr-6">Mentions légales</a>
+            </li>
+            <li>
+                <a href="#" class="mr-4 hover:underline md:mr-6">C.G.U</a>
+            </li>
 
-
-<!-- BOUTONS MODIFICATION -->
-<div class="flex justify-center mt-8">
-    <button id="btn-modifier-finale" class="bg-gray-100 font-bold py-2 px-4 inline-flex items-center z-50">
-        <img src="./img/icon-modif.svg" id="btn-icon" class="w-6 h-6 mr-2">
-        <span id="btn-text">Modifier</span>
-    </button>
-</div>
+        </ul>
+    </div>
+</footer>
 
 <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
 <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>

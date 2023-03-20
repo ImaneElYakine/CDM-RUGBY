@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    'poules.html', 'finale.html', 'matchs-passés.html',
+    'poules.html', 'finale.html', 'matchs-passés.html', 'classement.html'
   ],
   theme: {
     extend: {

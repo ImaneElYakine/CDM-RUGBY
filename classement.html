@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:x-transition="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" name="viewport">
+    <title>Classement</title>
+    <link rel="icon" type="image/png" href="/img/favicon_mediametrie.png" />
+    <link href="css/output.css" rel="stylesheet">
+</head>
+
+<body class="font-mediametrie">
+<div class="fixed w-full h-full bg-gray-900 opacity-70 z-0 hidden" id="darken"></div>
+<!-- HEADER -->
+<nav class=" md:bg-transparent py-2 md:py-4 text-white">
+    <div class=" container px-4 mx-auto md:flex md:items-center">
+        <div class="flex justify-between items-center">
+            <a class="font-bold text-xl text-indigo-600" href="#">
+                <img class="w-32" src="img/logo-blanc-mm.png" alt="Médiamétrie">
+            </a>
+            <button class="md:hidden" id="navbar-toggle">
+                Icon
+            </button>
+        </div>
+        <div class="hidden md:flex flex-col md:flex-row md:ml-auto mt-3 md:mt-0" id="navbar-collapse">
+            <a class="p-2 lg:px-4 md:mx-2 transition-colors duration-300" href="poules.html">En ce moment</a>
+            <a class="p-2 lg:px-4 md:mx-2 transition-colors duration-300" href="matchs-passés.html">Matchs passés</a>
+            <a class="p-2 lg:px-4 md:mx-2 text-red-500 font-bold" href="classement.html">Classement</a>
+            <a class="p-2 lg:px-4 md:mx-2 transition-colors duration-300" href="#">Bonus</a>
+            <a class="p-2 lg:px-4 md:mx-2 transition-colors duration-300" href="#">Règles du jeu</a>
+        </div>
+    </div>
+</nav>
+
+<!-- INTRODUCTION  -->
+<div class="text-white flex justify-center items-center mb-10">
+    <div class="w-2/5">
+        <p class="font-bold py-2">Score</p>
+        <div>Consultez votre score ainsi que vos différents statistiques
+            et comparez-vous aux meilleurs pronostiqueurs depuis le début du jeu.
+        </div>
+    </div>
+</div>
+
+<!-- MES STATISTIQUES  -->
+<div id="statistiques" class="flex justify-center items-center">
+    <div class=" grid flex items-center z-50 w-2/5">
+        <div class="bg-white p-2">
+            <div class="flex items-center justify-center py-2 font-bold text-lg border-b">Mes statistiques</div>
+            <table class="table-auto mx-auto">
+                <thead>
+                <tr c>
+                    <th class="pr-4 py-2">Victoires</th>
+                    <th class="px-4 py-2">Bon Score</th>
+                    <th class="px-4 py-2">Défaites</th>
+                    <th class="px-4 py-2">Total</th>
+                    <th class="pl-4 py-2">Rangs</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="text-center font-bold text-green-500">18</td>
+                    <td class="text-center font-bold text-green-500">5</td>
+                    <td class="text-center font-bold text-red-500">8</td>
+                    <td class="text-center font-bold">43 pts</td>
+                    <td class="text-center font-bold flex justify-center">39 <img class="w-5 pl-2" src="img/icon-hausse.svg" ></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- TOP 10 JOUEURS  -->
+<div id="top10" class="flex justify-center items-center pt-8">
+    <div class=" grid flex items-center z-50 w-2/5">
+        <div class="bg-white p-2">
+            <div class="flex items-center justify-center py-2 font-bold text-lg border-b">Top 10 Joueurs</div>
+            <table class="table-auto mx-auto">
+                <thead>
+                <tr>
+                    <th class="px-12 py-2">Rang</th>
+                    <th class="px-12 py-2">Nom</th>
+                    <th class="px-12 py-2">Points</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="text-center text-lg font-bold flex justify-center">1 <img class="w-5 pl-2" src="img/icon-hausse.svg" ></td>
+                    <td class="text-center font-bold">Sportif Enjoué 2</td>
+                    <td class="text-center font-bold">88</td>
+                </tr>
+                <tr>
+                    <td class="text-center text-lg font-bold flex justify-center">2 <img class="w-5 pl-2" src="img/icon-hausse.svg" ></td>
+                    <td class="text-center font-bold">Sportif Enjoué 2</td>
+                    <td class="text-center font-bold">8</td>
+                </tr>
+                <tr>
+                    <td class="text-center text-lg font-bold flex justify-center">3 <img class="w-5 pl-2" src="img/icon-hausse.svg" ></td>
+                    <td class="text-center font-bold">Sportif Enjoué 2</td>
+                    <td class="text-center font-bold">8</td>
+                </tr>
+                <tr>
+                    <td class="text-center text-lg font-bold flex justify-center">4 <img class="w-5 pl-2" src="img/icon-hausse.svg" ></td>
+                    <td class="text-center font-bold">Sportif Enjoué 2</td>
+                    <td class="text-center font-bold">8</td>
+                </tr>
+                <tr>
+                    <td class="text-center text-lg font-bold flex justify-center">5 <img class="w-5 pl-2" src="img/icon-egale.svg" ></td>
+                    <td class="text-center font-bold">Sportif Enjoué 2</td>
+                    <td class="text-center font-bold">8</td>
+                </tr>
+                <tr>
+                    <td class="text-center text-lg font-bold flex justify-center">6 <img class="w-5 pl-2" src="img/icon-hausse.svg" ></td>
+                    <td class="text-center font-bold">Sportif Enjoué 2</td>
+                    <td class="text-center font-bold">8</td>
+                </tr>
+                <tr>
+                    <td class="text-center text-lg font-bold flex justify-center">7 <img class="w-5 pl-2" src="img/icon-hausse.svg" ></td>
+                    <td class="text-center font-bold">Sportif Enjoué 2</td>
+                    <td class="text-center font-bold">8</td>
+                </tr>
+                <tr>
+                    <td class="text-center text-lg font-bold flex justify-center">8 <img class="w-5 pl-2" src="img/icon-baisse.svg" ></td>
+                    <td class="text-center font-bold">Sportif Enjoué 2</td>
+                    <td class="text-center font-bold">8</td>
+                </tr>
+                <tr>
+                    <td class="text-center text-lg font-bold flex justify-center">9 <img class="w-5 pl-2" src="img/icon-hausse.svg" ></td>
+                    <td class="text-center font-bold">Sportif Enjoué 2</td>
+                    <td class="text-center font-bold">8</td>
+                </tr>
+                <tr>
+                    <td class="text-center text-lg font-bold flex justify-center">10 <img class="w-5 pl-2" src="img/icon-hausse.svg" ></td>
+                    <td class="text-center font-bold">Sportif Enjoué 2</td>
+                    <td class="text-center font-bold">8</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- CGU/Mentions légales -->
+<footer class="mt-6 z-0">
+    <div class="w-full mx-auto container md:p-6 p-4 md:flex md:items-center md:justify-between">
+      <span class="text-sm text-white sm:text-center opacity-80">© 2023 <a target="_blank" href="https://www.mediametrie.fr/fr" class="hover:underline">Médiamétrie</a>
+    </span>
+        <ul class="flex flex-wrap items-center mt-3 text-sm text-white opacity-80 sm:mt-0">
+            <li>
+                <a href="#" class="mr-4 hover:underline md:mr-6 ">Cookies</a>
+            </li>
+            <li>
+                <a href="#" class="mr-4 hover:underline md:mr-6">Mentions légales</a>
+            </li>
+            <li>
+                <a href="#" class="mr-4 hover:underline md:mr-6">C.G.U</a>
+            </li>
+
+        </ul>
+    </div>
+</footer>
+
+<script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+<script src="https://unpkg.com/flowbite@1.4.4/dist/flowbite.js"></script>
+<script src="script.js"></script>
+</body>
+
+</html>
