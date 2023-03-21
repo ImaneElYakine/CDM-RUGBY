@@ -6,6 +6,29 @@ toggleBtn.onclick = () => {
     collapse.classList.toggle("flex");
 };
 
+//
+$("input:checkbox").click(function() {
+    const bol = $("input:checkbox:checked").length >= 2;
+    $("input:checkbox").not(":checked").attr("disabled",bol);
+});
+
+function getSelectValues(select) {
+    const result = [];
+    const options = select && select.options;
+    let opt;
+
+    let i = 0, iLen = options.length;
+    for (; i<iLen; i++) {
+        opt = options[i];
+
+        if (opt.selected) {
+            result.push(opt.value || opt.text);
+        }
+    }
+    return result;
+}
+
+
 // Création des listes de poules
 let groupeA = $("#groupeA");
 groupeA.sortable({
@@ -39,17 +62,111 @@ if(btnModifierPoule){
     btnModifierPoule.addEventListener('click', modifierPoule);
 }
 
-const btnModifierFinale = document.getElementById('btn-modifier-finale');
-if(btnModifierFinale){
-    btnModifierFinale.addEventListener('click', modifierFinale);
-}
-
 const btnModifierBonus = document.getElementById('btn-modifier-bonus');
 if(btnModifierBonus){
     btnModifierBonus.addEventListener('click', modifierBonus);
 }
 
-// Fonctions pour la modification
+// Match final 1
+if(document.getElementById('btn-modif-1')) {
+    document.getElementById('btn-modif-1').addEventListener('click', function () {
+        if (modeModification === false) {
+            modeModification = true;
+            document.getElementById("darken").classList.remove("hidden");
+            document.getElementsByClassName("score1")[0].disabled = false;
+            document.getElementsByClassName("score1")[1].disabled = false;
+            document.getElementsByClassName("score1")[0].classList.remove("bg-gray-400");
+            document.getElementsByClassName("score1")[1].classList.remove("bg-gray-400");
+            document.getElementById('btn-modif-1').children[0].classList.add("hidden");
+            document.getElementById('btn-modif-1').children[1].innerHTML = "Valider";
+        } else if (modeModification === true) {
+            modeModification = false;
+            document.getElementById("darken").classList.add("hidden");
+            document.getElementsByClassName("score1")[0].disabled = true;
+            document.getElementsByClassName("score1")[1].disabled = true;
+            document.getElementsByClassName("score1")[0].classList.add("bg-gray-400");
+            document.getElementsByClassName("score1")[1].classList.add("bg-gray-400");
+            document.getElementById('btn-modif-1').children[0].classList.remove("hidden");
+            document.getElementById('btn-modif-1').children[1].innerHTML = "Modifier";
+        }
+    });
+}
+
+// Match final 2
+if(document.getElementById('btn-modif-2')) {
+    document.getElementById('btn-modif-2').addEventListener('click', function () {
+        if (modeModification === false) {
+            modeModification = true;
+            document.getElementById("darken").classList.remove("hidden");
+            document.getElementsByClassName("score2")[0].disabled = false;
+            document.getElementsByClassName("score2")[1].disabled = false;
+            document.getElementsByClassName("score2")[0].classList.remove("bg-gray-400");
+            document.getElementsByClassName("score2")[1].classList.remove("bg-gray-400");
+            document.getElementById('btn-modif-2').children[0].classList.add("hidden");
+            document.getElementById('btn-modif-2').children[1].innerHTML = "Valider";
+        } else if (modeModification === true) {
+            modeModification = false;
+            document.getElementById("darken").classList.add("hidden");
+            document.getElementsByClassName("score2")[0].disabled = true;
+            document.getElementsByClassName("score2")[1].disabled = true;
+            document.getElementsByClassName("score2")[0].classList.add("bg-gray-400");
+            document.getElementsByClassName("score2")[1].classList.add("bg-gray-400");
+            document.getElementById('btn-modif-2').children[0].classList.remove("hidden");
+            document.getElementById('btn-modif-2').children[1].innerHTML = "Modifier";
+        }
+    });
+}
+
+// Match final 3
+if(document.getElementById('btn-modif-3')) {
+    document.getElementById('btn-modif-3').addEventListener('click', function () {
+        if (modeModification === false) {
+            modeModification = true;
+            document.getElementById("darken").classList.remove("hidden");
+            document.getElementsByClassName("score3")[0].disabled = false;
+            document.getElementsByClassName("score3")[1].disabled = false;
+            document.getElementsByClassName("score3")[0].classList.remove("bg-gray-400");
+            document.getElementsByClassName("score3")[1].classList.remove("bg-gray-400");
+            document.getElementById('btn-modif-3').children[0].classList.add("hidden");
+            document.getElementById('btn-modif-3').children[1].innerHTML = "Valider";
+        } else if (modeModification === true) {
+            modeModification = false;
+            document.getElementById("darken").classList.add("hidden");
+            document.getElementsByClassName("score3")[0].disabled = true;
+            document.getElementsByClassName("score3")[1].disabled = true;
+            document.getElementsByClassName("score3")[0].classList.add("bg-gray-400");
+            document.getElementsByClassName("score3")[1].classList.add("bg-gray-400");
+            document.getElementById('btn-modif-3').children[0].classList.remove("hidden");
+            document.getElementById('btn-modif-3').children[1].innerHTML = "Modifier";
+        }
+    });
+}
+
+// Match final 4
+if(document.getElementById('btn-modif-4')) {
+    document.getElementById('btn-modif-4').addEventListener('click', function () {
+        if (modeModification === false) {
+            modeModification = true;
+            document.getElementById("darken").classList.remove("hidden");
+            document.getElementsByClassName("score4")[0].disabled = false;
+            document.getElementsByClassName("score4")[1].disabled = false;
+            document.getElementsByClassName("score4")[0].classList.remove("bg-gray-400");
+            document.getElementsByClassName("score4")[1].classList.remove("bg-gray-400");
+            document.getElementById('btn-modif-4').children[0].classList.add("hidden");
+            document.getElementById('btn-modif-4').children[1].innerHTML = "Valider";
+        } else if (modeModification === true) {
+            modeModification = false;
+            document.getElementById("darken").classList.add("hidden");
+            document.getElementsByClassName("score4")[0].disabled = true;
+            document.getElementsByClassName("score4")[1].disabled = true;
+            document.getElementsByClassName("score4")[0].classList.add("bg-gray-400");
+            document.getElementsByClassName("score4")[1].classList.add("bg-gray-400");
+            document.getElementById('btn-modif-4').children[0].classList.remove("hidden");
+            document.getElementById('btn-modif-4').children[1].innerHTML = "Modifier";
+        }
+    });
+}
+
 function modifierPoule(){
     if (modeModification === false) {
         modeModification = true;
@@ -67,13 +184,11 @@ function modifierPoule(){
         groupeC.sortable( "option", "disabled", false );
         groupeD.sortable( "option", "disabled", false );
     }
-
     else if (modeModification === true) {
         modeModification = false;
         // Affichage
         const pays = document.getElementsByClassName("pays");
         for (let index = 0; index < pays.length; index++) {
-
         }
         document.getElementById('btn-text').innerHTML = 'Modifier';
         document.getElementById("darken").classList.add("hidden");
@@ -83,35 +198,6 @@ function modifierPoule(){
         groupeB.sortable( "option", "disabled", true );
         groupeC.sortable( "option", "disabled", true );
         groupeD.sortable( "option", "disabled", true );
-    }
-}
-
-function modifierFinale() {
-    if (modeModification === false) {
-        modeModification = true;
-        // Affichage
-        document.getElementById('btn-text').innerHTML = 'Valider';
-        document.getElementById('btn-icon').classList.add("hidden");
-        document.getElementById("darken").classList.remove("hidden");
-        const score = document.getElementsByClassName("score");
-        for (let index = 0; index < score.length; index++) {
-            score[index].disabled = false;
-            score[index].style.backgroundColor = "#FFFFFF";
-            score[index].style.border = "solid 1px #d0d0d0";
-        }
-    }
-    else if (modeModification === true) {
-        modeModification = false;
-        // Affichage
-        document.getElementById('btn-text').innerHTML = 'Modifier';
-        document.getElementById("darken").classList.add("hidden");
-        document.getElementById('btn-icon').classList.remove("hidden");
-        const score = document.getElementsByClassName("score");
-        for (let index = 0; index < score.length; index++) {
-            score[index].disabled = true;
-            score[index].style.backgroundColor = "#d0d0d0";
-            score[index].style.border = "none";
-        }
     }
 }
 
@@ -169,14 +255,4 @@ function afficheResultatsFinale(){
 }
 
 // Selection de 4 équipes maximum pour le bonus demi-finale
-const bonusDemi = document.getElementById("bonus-demi");
-console.log(bonusDemi);
 
-bonusDemi.addEventListener('change', (event) => {
-    const selectedOptions = Array.from(bonusDemi.selectedOptions);
-    if (selectedOptions.length > 4) {
-        // prevent the selection of additional options
-        alert("test");
-        this.value = ""; // reset the selected options
-    }
-});

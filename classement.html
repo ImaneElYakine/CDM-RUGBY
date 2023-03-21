@@ -8,7 +8,7 @@
     <link href="css/output.css" rel="stylesheet">
 </head>
 
-<body class="font-mediametrie">
+<body class="font-mediametrie min-h-screen flex flex-col">
 <div class="fixed w-full h-full bg-gray-900 opacity-70 z-0 hidden" id="darken"></div>
 <!-- HEADER -->
 <nav class=" md:bg-transparent py-2 md:py-4 text-white">
@@ -18,7 +18,7 @@
                 <img class="w-32" src="img/logo-blanc-mm.png" alt="Médiamétrie">
             </a>
             <button class="md:hidden" id="navbar-toggle">
-                Icon
+                <img class="w-7" src="img/icon-menu.svg">
             </button>
         </div>
         <div class="hidden md:flex flex-col md:flex-row md:ml-auto mt-3 md:mt-0" id="navbar-collapse">
@@ -26,16 +26,16 @@
             <a class="p-2 lg:px-4 md:mx-2 transition-colors duration-300" href="matchs-passés.html">Matchs passés</a>
             <a class="p-2 lg:px-4 md:mx-2 text-red-500 font-bold" href="classement.html">Classement</a>
             <a class="p-2 lg:px-4 md:mx-2 transition-colors duration-300" href="bonus.html">Bonus</a>
-            <a class="p-2 lg:px-4 md:mx-2 transition-colors duration-300" href="#">Règles du jeu</a>
+            <a class="p-2 lg:px-4 md:mx-2 transition-colors duration-300" href="règles.html">Règles du jeu</a>
         </div>
     </div>
 </nav>
 
 <!-- INTRODUCTION  -->
-<div class="text-white flex justify-center items-center mb-10">
-    <div class="w-2/5">
+<div class="text-white flex justify-center items-center mb-10 flex-grow">
+    <div class="md:w-2/5 w-5/6">
         <p class="font-bold py-2">Score</p>
-        <div>Consultez votre score ainsi que vos différents statistiques
+        <div class="text-sm md:text-base">Consultez votre score ainsi que vos différents statistiques
             et comparez-vous aux meilleurs pronostiqueurs depuis le début du jeu.
         </div>
     </div>
@@ -43,17 +43,17 @@
 
 <!-- STATISTIQUES  -->
 <div id="statistiques" class="flex justify-center items-center">
-    <div class=" grid flex items-center z-50 w-2/5">
+    <div class=" grid flex items-center z-50 md:w-2/5 w-5/6">
         <div class="bg-white p-2">
-            <div class="flex items-center justify-center py-2 font-bold text-lg border-b">Plaqueur Agile 1</div>
+            <div class="flex items-center justify-center py-2 font-bold text-base md:text-lg border-b">Plaqueur Agile 1</div>
             <table class="table-auto mx-auto">
                 <thead>
-                <tr c>
-                    <th class="pr-4 py-2">Victoires</th>
-                    <th class="px-4 py-2">Bon Score</th>
-                    <th class="px-4 py-2">Défaites</th>
-                    <th class="px-4 py-2">Total</th>
-                    <th class="pl-4 py-2">Rangs</th>
+                <tr>
+                    <th class="md:pr-4 py-2 text-sm md:text-base">Victoires</th>
+                    <th class="md:px-4 py-2 text-sm md:text-base">Bon Score</th>
+                    <th class="md:px-4 py-2 text-sm md:text-base">Défaites</th>
+                    <th class="md:px-4 py-2 text-sm md:text-base">Total</th>
+                    <th class="md:pl-4 py-2 text-sm md:text-base">Rangs</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -72,68 +72,67 @@
 
 <!-- TOP 10 JOUEURS  -->
 <div id="top10" class="flex justify-center items-center pt-8">
-    <div class=" grid flex items-center z-50 w-2/5">
+    <div class=" grid flex items-center z-50 md:w-2/5 w-5/6">
         <div class="bg-white p-2">
-            <div class="flex items-center justify-center py-2 font-bold text-lg border-b">Top 10 Joueurs</div>
+            <div class="flex items-center justify-center py-2 font-bold text-base md:text-lg border-b">Top 10 Joueurs</div>
             <table class="table-auto mx-auto">
                 <thead>
                 <tr>
-                    <th class="px-12 py-2 font-bold">Rang</th>
-                    <th class="px-12 py-2 font-bold">Nom</th>
-                    <th class="px-12 py-2 font-bold">Points</th>
-
+                    <th class="px-4 md:px-12 py-2 font-bold">Rang</th>
+                    <th class="px-4 md:px-12 py-2 font-bold">Nom</th>
+                    <th class="px-4 md:px-12 py-2 font-bold">Points</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
-                    <td class="text-center text-lg font-bold flex justify-center">1 <img class="w-5 pl-2" src="img/icon-hausse.svg" ></td>
-                    <td class="text-center">Sportif Enjoué 2</td>
-                    <td class="text-center">88</td>
+                    <td class="text-center text-sm md:text-lg font-bold flex justify-center py-1">1 <img class="w-5 pl-2" src="img/icon-hausse.svg" ></td>
+                    <td class="text-center text-sm md:text-lg">Sportif Enjoué 2</td>
+                    <td class="text-center text-sm md:text-lg">88</td>
                 </tr>
                 <tr>
-                    <td class="text-center text-lg font-bold flex justify-center">2 <img class="w-5 pl-2" src="img/icon-hausse.svg" ></td>
-                    <td class="text-center">Sportif Enjoué 2</td>
-                    <td class="text-center">8</td>
+                    <td class="text-center text-sm md:text-lg font-bold flex justify-center py-1">2 <img class="w-5 pl-2" src="img/icon-hausse.svg" ></td>
+                    <td class="text-center text-sm md:text-lg">Sportif Enjoué 2</td>
+                    <td class="text-center text-sm md:text-lg">8</td>
                 </tr>
                 <tr>
-                    <td class="text-center text-lg font-bold flex justify-center">3 <img class="w-5 pl-2" src="img/icon-hausse.svg" ></td>
-                    <td class="text-center">Sportif Enjoué 2</td>
-                    <td class="text-center">8</td>
+                    <td class="text-center text-sm md:text-lg font-bold flex justify-center py-1">3 <img class="w-5 pl-2" src="img/icon-hausse.svg" ></td>
+                    <td class="text-center text-sm md:text-lg">Sportif Enjoué 2</td>
+                    <td class="text-center text-sm md:text-lg">8</td>
                 </tr>
                 <tr>
-                    <td class="text-center text-lg font-bold flex justify-center">4 <img class="w-5 pl-2" src="img/icon-hausse.svg" ></td>
-                    <td class="text-center">Sportif Enjoué 2</td>
-                    <td class="text-center">8</td>
+                    <td class="text-center text-sm md:text-lg font-bold flex justify-center py-1">4 <img class="w-5 pl-2" src="img/icon-hausse.svg" ></td>
+                    <td class="text-center text-sm md:text-lg">Sportif Enjoué 2</td>
+                    <td class="text-center text-sm md:text-lg">8</td>
                 </tr>
                 <tr>
-                    <td class="text-center text-lg font-bold flex justify-center">5 <img class="w-5 pl-2" src="img/icon-egale.svg" ></td>
-                    <td class="text-center">Sportif Enjoué 2</td>
-                    <td class="text-center">8</td>
+                    <td class="text-center text-sm md:text-lg font-bold flex justify-center py-1">5 <img class="w-5 pl-2" src="img/icon-egale.svg" ></td>
+                    <td class="text-center text-sm md:text-lg">Sportif Enjoué 2</td>
+                    <td class="text-center text-sm md:text-lg">8</td>
                 </tr>
                 <tr>
-                    <td class="text-center text-lg font-bold flex justify-center">6 <img class="w-5 pl-2" src="img/icon-hausse.svg" ></td>
-                    <td class="text-center">Sportif Enjoué 2</td>
-                    <td class="text-center">8</td>
+                    <td class="text-center text-sm md:text-lg  font-bold flex justify-center py-1">6 <img class="w-5 pl-2" src="img/icon-hausse.svg" ></td>
+                    <td class="text-center text-sm md:text-lg">Sportif Enjoué 2</td>
+                    <td class="text-center text-sm md:text-lg">8</td>
                 </tr>
                 <tr>
-                    <td class="text-center text-lg font-bold flex justify-center">7 <img class="w-5 pl-2" src="img/icon-hausse.svg" ></td>
-                    <td class="text-center">Sportif Enjoué 2</td>
-                    <td class="text-center">8</td>
+                    <td class="text-center text-sm md:text-lg font-bold flex justify-center py-1">7 <img class="w-5 pl-2" src="img/icon-hausse.svg" ></td>
+                    <td class="text-center text-sm md:text-lg">Sportif Enjoué 2</td>
+                    <td class="text-center text-sm md:text-lg">8</td>
                 </tr>
                 <tr>
-                    <td class="text-center text-lg font-bold flex justify-center">8 <img class="w-5 pl-2" src="img/icon-baisse.svg" ></td>
-                    <td class="text-center">Sportif Enjoué 2</td>
-                    <td class="text-center">8</td>
+                    <td class="text-center text-sm md:text-lg font-bold flex justify-center py-1">8 <img class="w-5 pl-2" src="img/icon-baisse.svg" ></td>
+                    <td class="text-center text-sm md:text-lg">Sportif Enjoué 2</td>
+                    <td class="text-center text-sm md:text-lg">8</td>
                 </tr>
                 <tr>
-                    <td class="text-center text-lg font-bold flex justify-center">9 <img class="w-5 pl-2" src="img/icon-hausse.svg" ></td>
-                    <td class="text-center">Sportif Enjoué 2</td>
-                    <td class="text-center">8</td>
+                    <td class="text-center text-sm md:text-lg font-bold flex justify-center py-1">9 <img class="w-5 pl-2" src="img/icon-hausse.svg" ></td>
+                    <td class="text-center text-sm md:text-lg">Sportif Enjoué 2</td>
+                    <td class="text-center text-sm md:text-lg">8</td>
                 </tr>
                 <tr>
-                    <td class="text-center text-lg font-bold flex justify-center">10 <img class="w-5 pl-2" src="img/icon-hausse.svg" ></td>
-                    <td class="text-center">Sportif Enjoué 2</td>
-                    <td class="text-center">8</td>
+                    <td class="text-center text-sm md:text-lg font-bold flex justify-center py-1">10 <img class="w-5 pl-2" src="img/icon-hausse.svg" ></td>
+                    <td class="text-center text-sm md:text-lg">Sportif Enjoué 2</td>
+                    <td class="text-center text-sm md:text-lg">8</td>
                 </tr>
                 </tbody>
             </table>

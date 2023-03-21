@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    'poules.html', 'finale.html', 'matchs-passés.html', 'classement.html', 'bonus.html',
+    'poules.html', 'finale.html', 'matchs-passés.html', 'classement.html', 'bonus.html', 'règles.html',
     "./src/**/*.{html,js}",
     "./node_modules/tw-elements/dist/js/**/*.js"
   ],

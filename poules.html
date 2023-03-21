@@ -8,7 +8,7 @@
     <link href="css/output.css" rel="stylesheet">
 </head>
 
-<body class=" font-mediametrie">
+<body class="font-mediametrie min-h-screen flex flex-col">
 <div class="fixed w-full h-full bg-gray-900 opacity-70 z-10 hidden" id="darken"></div>
 <!-- HEADER -->
 <nav class=" md:bg-transparent py-2 md:py-4 text-white">
@@ -18,7 +18,7 @@
                 <img class="w-32" src="img/logo-blanc-mm.png" alt="Médiamétrie">
             </a>
             <button class="md:hidden" id="navbar-toggle">
-                Icon
+                <img class="w-7" src="img/icon-menu.svg">
             </button>
         </div>
         <div class="hidden md:flex flex-col md:flex-row md:ml-auto mt-3 md:mt-0" id="navbar-collapse">
@@ -26,14 +26,14 @@
             <a class="p-2 lg:px-4 md:mx-2 transition-colors duration-300" href="matchs-passés.html">Matchs passés</a>
             <a class="p-2 lg:px-4 md:mx-2 transition-colors duration-300" href="classement.html">Classement</a>
             <a class="p-2 lg:px-4 md:mx-2 transition-colors duration-300" href="bonus.html">Bonus</a>
-            <a class="p-2 lg:px-4 md:mx-2 transition-colors duration-300" href="#">Règles du jeu</a>
+            <a class="p-2 lg:px-4 md:mx-2 transition-colors duration-300" href="règles.html">Règles du jeu</a>
         </div>
     </div>
 </nav>
 
 <!-- INTRODUCTION -->
-<div class="text-white flex justify-center items-center mb-10">
-    <div class="w-4/5">
+<div class="text-white flex justify-center items-center mb-10 flex-grow">
+    <div class="w-4/5 text-sm md:text-base">
         <p class="font-bold py-2">Phase de poule</p>
         Faites glisser tous les pays participants de la compétition en fonction de la position que vous pensez qu'ils
         occuperont à la fin des phases de poules. Par exemple, si vous pensez que le pays finira premier de sa poule,
@@ -48,7 +48,7 @@
         <!-- GROUPE A -->
         <div class="bg-white ">
             <div class="py-4 px-8">
-                <h4 class="text-lg font-semibold text-center border-b pb-4">
+                <h4 class="text-base md:text-lg font-semibold text-center border-b pb-4">
                     Groupe A
                 </h4>
                 <div class="flex">
@@ -87,7 +87,7 @@
         <!-- GROUPE B -->
         <div class="bg-white">
             <div class="py-4 px-8">
-                <h4 class="text-lg font-semibold text-center border-b pb-4">
+                <h4 class="text-base md:text-lg  font-semibold text-center border-b pb-4">
                     Groupe B
                 </h4>
                 <div class="flex">
@@ -126,7 +126,7 @@
         <!-- GROUPE C -->
         <div class="w-full bg-white">
             <div class="py-4 px-8">
-                <h4 class="text-lg font-semibold text-center border-b pb-4">
+                <h4 class="text-base md:text-lg  font-semibold text-center border-b pb-4">
                     Groupe C
                 </h4>
                 <div class="flex">
@@ -165,7 +165,7 @@
         <!-- GROUPE D -->
         <div class="w-full bg-white">
             <div class="py-4 px-8">
-                <h4 class="text-lg font-semibold text-center border-b pb-4">
+                <h4 class="text-base md:text-lg  font-semibold text-center border-b pb-4">
                     Groupe D
                 </h4>
                 <div class="flex">

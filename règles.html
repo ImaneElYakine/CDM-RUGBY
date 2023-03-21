@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:x-transition="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" name="viewport">
+    <title>Règles du jeu</title>
+    <link rel="icon" type="image/png" href="/img/favicon_mediametrie.png" />
+    <link href="css/output.css" rel="stylesheet">
+</head>
+
+<body class="font-mediametrie min-h-screen flex flex-col">
+<div class="fixed w-full h-full bg-gray-900 opacity-70 z-0 hidden" id="darken"></div>
+<!-- HEADER -->
+<nav class=" md:bg-transparent py-2 md:py-4 text-white">
+    <div class=" container px-4 mx-auto md:flex md:items-center">
+        <div class="flex justify-between items-center">
+            <a class="font-bold text-xl text-indigo-600" href="#">
+                <img class="w-32" src="img/logo-blanc-mm.png" alt="Médiamétrie">
+            </a>
+            <button class="md:hidden" id="navbar-toggle">
+                <img class="w-7" src="img/icon-menu.svg">
+            </button>
+        </div>
+        <div class="hidden md:flex flex-col md:flex-row md:ml-auto mt-3 md:mt-0" id="navbar-collapse">
+            <a class="p-2 lg:px-4 md:mx-2 transition-colors duration-300" href="poules.html">En ce moment</a>
+            <a class="p-2 lg:px-4 md:mx-2 transition-colors duration-300" href="matchs-passés.html">Matchs passés</a>
+            <a class="p-2 lg:px-4 md:mx-2 transition-colors duration-300" href="classement.html">Classement</a>
+            <a class="p-2 lg:px-4 md:mx-2 transition-colors duration-300" href="bonus.html">Bonus</a>
+            <a class="p-2 lg:px-4 md:mx-2 text-red-500 font-bold" href="règles.html">Règles du jeu</a>
+        </div>
+    </div>
+</nav>
+
+<!-- INTRODUCTION  -->
+<div class="text-white flex justify-center items-center mb-10 flex-grow">
+    <div class="md:w-2/5 w-5/6">
+        <p class="font-bold py-2">Règles du jeu</p>
+        <div>Consultez votre score ainsi que vos différents statistiques
+            et comparez-vous aux meilleurs pronostiqueurs depuis le début du jeu.
+        </div>
+    </div>
+</div>
+
+<!-- PARAGRAPHE 1  -->
+<div class=" flex justify-center items-center mb-10 flex-grow">
+    <div class="md:w-2/5 w-5/6">
+        <div class="text-white flex items-center justify-center text-lg font-bold mb-2">
+            Comment pronostiquer ?
+        </div>
+        <div class="text-white flex items-center justify-left text-base font-bold">
+            A. Phase de poule
+        </div>
+        <div class="bg-white p-4 my-5 flex justify-center items-center">
+            Vous devez faire glisser tous les pays participants de la compétition en fonction de la position que vous pensez qu'ils occuperont à la fin des phases de poules. Par exemple, si vous pensez que le pays finira premier de sa poule, vous devez le faire glisser en haut de la liste correspondante.
+        </div>
+        <div class="text-white flex items-center justify-left text-base font-bold">
+            B. Phase finale
+        </div>
+        <div class="bg-white p-4 my-5 flex justify-center items-center">
+            Pour la phase finale, vous devez pronostiquer le score exact pour chacune des confrontations entre les équipes. Par exemple, si vous pensez que l'équipe A va battre l'équipe B avec un score de 29-15, vous devez indiquer ce score exact.
+        </div>
+        <div class="text-white flex items-center justify-center text-lg font-bold py-2 mt-4">
+            Validation des pronostics
+        </div>
+        <div class="text-white flex items-center justify-left text-base font-bold">
+            A. Phase de poule
+        </div>
+        <div class="bg-white p-4 my-5 flex justify-center items-center">
+            Vous devez valider vos pronostics au plus tard 30 minutes avant le début du match d'ouverture de la compétition. Cela signifie que vous avez jusqu'à ce moment-là pour déterminer votre ordre de classement et le soumettre.
+        </div>
+        <div class="text-white flex items-center justify-left text-base font-bold">
+            B. Phase finale
+        </div>
+        <div class="bg-white p-4 my-5 flex justify-center items-center">
+            Vous devez valider votre pronostic pour chaque match au plus tard 30 minutes avant le début de chaque match. Cela signifie que vous avez jusqu'à ce moment-là pour déterminer votre pronostic et le soumettre.
+        </div>
+        <div class="text-white flex items-center justify-center text-lg font-bold py-2 mt-4">
+            Score
+        </div>
+        <div class="bg-white p-4 my-5 flex justify-center items-center">
+            Vous autorisez un score en fonction de la précision de vos prédictions. Plus vos pronostics sont précis, plus votre score sera élevé. Vous pourrez voir votre score à la fin des phases de poules et cela vous permettra de savoir à quel point vos usuels étaient justes.
+        </div>
+        <div class="text-white flex items-center justify-center text-lg font-bold py-2 mt-4">
+            Pronostic bonus
+        </div>
+        <div class="bg-white p-4 my-5 flex-col justify-center items-center">
+            <p>En plus de donner vos pronostics pour la phase de poule et la phase finale, vous pourrez également pronostiquer sur certains aspects de la compétition qui ne sont pas directement liés aux matchs.</p>
+            <br>
+            <p>Les pronostics bonus sont les suivants :</p>
+            <br>
+            <p>•	L'équipe championne du monde : Pronostiquez quelle équipe sera couronnée championne du monde à la fin de la compétition.</p>
+            <p>•	Les 4 équipes en demi-finales : Pronostiquez quelles seront les 4 équipes qui atteindront les demi-finales de la compétition.</p>
+            <p>•	La nationalité du meilleur marqueur d'essai : Pronostiquez la nationalité du joueur qui marquera le plus d'essais pendant la compétition.</p>
+            <p>•	La nationalité du meilleur réalisateur : Pronostiquez la nationalité du joueur qui marquera le plus de points pendant la compétition.</p>
+            <br>
+            <p>Vous aurez jusqu’à 30 minutes avant le début de la compétition pour valider vos pronostics bonus. Les résultats pour le pronostic bonus seront annoncés à la fin de la compétition.</p>
+
+        </div>
+    </div>
+</div>
+
+<!-- CGU/Mentions légales -->
+<footer class="mt-6 z-0">
+    <div class="w-full mx-auto container md:p-6 p-4 md:flex md:items-center md:justify-between">
+      <span class="text-sm text-white sm:text-center opacity-80">© 2023 <a target="_blank" href="https://www.mediametrie.fr/fr" class="hover:underline">Médiamétrie</a>
+    </span>
+        <ul class="flex flex-wrap items-center mt-3 text-sm text-white opacity-80 sm:mt-0">
+            <li>
+                <a href="#" class="mr-4 hover:underline md:mr-6 ">Cookies</a>
+            </li>
+            <li>
+                <a href="#" class="mr-4 hover:underline md:mr-6">Mentions légales</a>
+            </li>
+            <li>
+                <a href="#" class="mr-4 hover:underline md:mr-6">C.G.U</a>
+            </li>
+
+        </ul>
+    </div>
+</footer>
+
+<script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+<script src="https://unpkg.com/flowbite@1.4.4/dist/flowbite.js"></script>
+<script src="script.js"></script>
+</body>
+
+</html>

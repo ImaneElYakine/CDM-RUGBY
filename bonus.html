@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
 </head>
 
-<body class="font-mediametrie">
-<div class="fixed w-full h-full bg-gray-900 opacity-70 z-0 hidden" id="darken"></div>
+<body class="font-mediametrie min-h-screen flex flex-col">
+<div class="fixed w-full h-full bg-gray-900 opacity-70 z-10 hidden" id="darken"></div>
 <!-- HEADER -->
 <nav class=" md:bg-transparent py-2 md:py-4 text-white">
     <div class=" container px-4 mx-auto md:flex md:items-center">
@@ -19,7 +19,7 @@
                 <img class="w-32" src="img/logo-blanc-mm.png" alt="Médiamétrie">
             </a>
             <button class="md:hidden" id="navbar-toggle">
-                Icon
+                <img class="w-7" src="img/icon-menu.svg">
             </button>
         </div>
         <div class="hidden md:flex flex-col md:flex-row md:ml-auto mt-3 md:mt-0" id="navbar-collapse">
@@ -27,16 +27,16 @@
             <a class="p-2 lg:px-4 md:mx-2 transition-colors duration-300" href="matchs-passés.html">Matchs passés</a>
             <a class="p-2 lg:px-4 md:mx-2 transition-colors duration-300" href="classement.html">Classement</a>
             <a class="p-2 lg:px-4 md:mx-2 text-red-500 font-bold" href="bonus.html">Bonus</a>
-            <a class="p-2 lg:px-4 md:mx-2 transition-colors duration-300" href="#">Règles du jeu</a>
+            <a class="p-2 lg:px-4 md:mx-2 transition-colors duration-300" href="règles.html">Règles du jeu</a>
         </div>
     </div>
 </nav>
 
 <!-- INTRODUCTION  -->
-<div class="text-white flex justify-center items-center mb-10">
-    <div class="w-3/5">
-        <p class="font-bold py-2">Bonus</p>
-        <div>En plus de vos pronostics pour les matchs en phase de poule et en phase finale, vous pouvez également pronostiquer pour les catégories suivantes : <br>
+<div class="text-white flex justify-center items-center mb-10 flex-grow">
+    <div class="md:w-3/5 w-5/6">
+        <p class="font-bold pb-2">Bonus</p>
+        <div class="text-sm md:text-base">En plus de vos pronostics pour les matchs en phase de poule et en phase finale, vous pouvez également pronostiquer pour les catégories suivantes : <br>
             - L'équipe championne du monde : Vous choisissez parmi les 20 équipes participantes celle qui sera couronner championne du monde 2023 <br>
             - Les 4 équipes en demi-finales : Les 4 équipes que vous pensez voir en demi-finales de la compétition. <br>
             - La nationalité du meilleur marqueur d'essai : Vous pronostiquer la nationalité du joueur qui marquera le plus d'essais pendant la compétition. <br>
@@ -46,7 +46,7 @@
     </div>
 </div>
 <div class="flex justify-center items-center">
-    <div class=" grid sm:grid-cols-2 gap-4  md:grid-cols-2 flex items-center z-50 w-3/5">
+    <div class=" grid sm:grid-cols-2 gap-4  md:grid-cols-2 flex items-center z-50 md:w-3/5 w-5/6">
         <!-- EQUIPE CHAMPIONNE -->
         <div class="bg-white ">
             <div class="py-4 px-8">
@@ -83,13 +83,12 @@
                         <label for="bonus-demi" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Choisir 4 équipes</label>
                             <select class="bonus" disabled id="bonus-demi" data-te-select-init
                                     multiple data-te-select-all="false">
-                                <option value="FR" data-te-select-icon="./img/drapeaux/France.png">France</option>
-                                <option value="EN" data-te-select-icon="./img/drapeaux/Angleterre.png">Angleterre</option>
-                                <option value="ME" data-te-select-icon="./img/drapeaux/Mexique.png">Mexique</option>
-                                <option value="DA" data-te-select-icon="./img/drapeaux/Danemark.png">Danemark </option>
-                                <option value="AL" data-te-select-icon="./img/drapeaux/Allemagne.png">Allemagne</option>
+                                <option class="option-demi" value="FR" data-te-select-icon="./img/drapeaux/France.png">France</option>
+                                <option class="option-demi" value="EN" data-te-select-icon="./img/drapeaux/Angleterre.png">Angleterre</option>
+                                <option class="option-demi" value="ME" data-te-select-icon="./img/drapeaux/Mexique.png">Mexique</option>
+                                <option class="option-demi" value="DA" data-te-select-icon="./img/drapeaux/Danemark.png">Danemark </option>
+                                <option class="option-demi" value="AL" data-te-select-icon="./img/drapeaux/Allemagne.png">Allemagne</option>
                             </select>
-
                     </div>
                 </div>
             </div>
@@ -114,6 +113,7 @@
                             <option value="DA" data-te-select-icon="./img/drapeaux/Danemark.png">Danemark </option>
                             <option value="AL" data-te-select-icon="./img/drapeaux/Allemagne.png">Allemagne</option>
                         </select>
+
                     </div>
                 </div>
             </div>
@@ -154,13 +154,13 @@
 
 
 <!-- CGU/Mentions légales -->
-<footer class="mt-6 z-0">
-    <div class="w-full mx-auto container md:p-6 p-4 md:flex md:items-center md:justify-between">
+<footer class="mt-6 -z-50">
+    <div class="w-full mx-auto container md:p-6 p-4 md:flex md:items-center md:justify-between z-0">
       <span class="text-sm text-white sm:text-center opacity-80">© 2023 <a target="_blank" href="https://www.mediametrie.fr/fr" class="hover:underline">Médiamétrie</a>
     </span>
-        <ul class="flex flex-wrap items-center mt-3 text-sm text-white opacity-80 sm:mt-0">
+        <ul class="flex flex-wrap items-center mt-3 text-sm text-white opacity-80 sm:mt-0 z-0">
             <li>
-                <a href="#" class="mr-4 hover:underline md:mr-6 ">Cookies</a>
+                <a href="#" class="mr-4 hover:underline md:mr-6 -z-50">Cookies</a>
             </li>
             <li>
                 <a href="#" class="mr-4 hover:underline md:mr-6">Mentions légales</a>
