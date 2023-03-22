@@ -1,3 +1,19 @@
+// Gestion de la popup Cookie
+const modal = document.getElementById("myModal");
+
+displayModal();
+
+function displayModal() {
+    modal.style.display = "block";
+    document.body.style.overflow = 'hidden';
+}
+
+function hideModal() {
+    modal.style.display = "none";
+    document.body.style.overflow = 'visible';
+}
+
+
 // Gestion du menu toggle en mode smartphone
 let toggleBtn = document.querySelector("#navbar-toggle");
 let collapse = document.querySelector("#navbar-collapse");
@@ -6,28 +22,10 @@ toggleBtn.onclick = () => {
     collapse.classList.toggle("flex");
 };
 
-//
-$("input:checkbox").click(function() {
-    const bol = $("input:checkbox:checked").length >= 2;
-    $("input:checkbox").not(":checked").attr("disabled",bol);
-});
-
-function getSelectValues(select) {
-    const result = [];
-    const options = select && select.options;
-    let opt;
-
-    let i = 0, iLen = options.length;
-    for (; i<iLen; i++) {
-        opt = options[i];
-
-        if (opt.selected) {
-            result.push(opt.value || opt.text);
-        }
-    }
-    return result;
-}
-
+// Retirer l'animation sur le bonus
+setTimeout(function () {
+    document.getElementById("bonus-menu").classList.remove("animate-ping");
+}, 1000);
 
 // Création des listes de poules
 let groupeA = $("#groupeA");
@@ -253,6 +251,3 @@ function afficheResultatsFinale(){
     document.getElementById("resultat-poules").classList.add("hidden");
     document.getElementById("resultat-finale").classList.remove("hidden");
 }
-
-// Selection de 4 équipes maximum pour le bonus demi-finale
-
