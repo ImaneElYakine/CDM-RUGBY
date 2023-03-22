@@ -24,33 +24,41 @@ toggleBtn.onclick = () => {
 
 // Retirer l'animation sur le bonus
 setTimeout(function () {
-    document.getElementById("bonus-menu").classList.remove("animate-ping");
-}, 1000);
+    document.getElementById("bonus-menu").classList.remove("animate-bounce");
+}, 6000);
 
 // Création des listes de poules
 let groupeA = $("#groupeA");
 groupeA.sortable({
     disabled: true,
     cursor: "move",
-    placeholder: "sortable-placeholder"
+    placeholder: "sortable-placeholder",
+    axis: "y",
+    containment: "#groupeA-container",
 });
 let groupeB = $("#groupeB");
 groupeB.sortable({
     disabled: true,
     cursor: "move",
-    placeholder: "sortable-placeholder"
+    placeholder: "sortable-placeholder",
+    axis: "y",
+    containment: "#groupeB-container",
 });
 let groupeC = $("#groupeC");
 groupeC.sortable({
     disabled: true,
     cursor: "move",
-    placeholder: "sortable-placeholder"
+    placeholder: "sortable-placeholder",
+    axis: "y",
+    containment: "#groupeC-container",
 });
 let groupeD = $("#groupeD");
 groupeD.sortable({
     disabled: true,
     cursor: "move",
-    placeholder: "sortable-placeholder"
+    placeholder: "sortable-placeholder",
+    axis: "y",
+    containment: "#groupeD-container",
 });
 let modeModification = false;
 
