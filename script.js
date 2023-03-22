@@ -22,11 +22,6 @@ toggleBtn.onclick = () => {
     collapse.classList.toggle("flex");
 };
 
-// Retirer l'animation sur le bonus
-setTimeout(function () {
-    document.getElementById("bonus-menu").classList.remove("animate-bounce");
-}, 6000);
-
 // Création des listes de poules
 let groupeA = $("#groupeA");
 groupeA.sortable({
