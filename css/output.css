@@ -1216,6 +1216,10 @@ video {
   width: 0.25rem;
 }
 
+.w-3\/6 {
+  width: 50%;
+}
+
 .min-w-\[310px\] {
   min-width: 310px;
 }
@@ -1286,6 +1290,10 @@ video {
 
 .table-auto {
   table-layout: auto;
+}
+
+.table-fixed {
+  table-layout: fixed;
 }
 
 .origin-\[center_bottom_0\] {
@@ -1526,6 +1534,10 @@ video {
   grid-template-columns: repeat(7, minmax(0, 1fr));
 }
 
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 .flex-row {
   flex-direction: row;
 }
@@ -1548,6 +1560,10 @@ video {
 
 .items-center {
   align-items: center;
+}
+
+.justify-start {
+  justify-content: flex-start;
 }
 
 .justify-end {
@@ -2205,6 +2221,18 @@ video {
 
 .pl-\[8px\] {
   padding-left: 8px;
+}
+
+.pl-1 {
+  padding-left: 0.25rem;
+}
+
+.pr-3 {
+  padding-right: 0.75rem;
+}
+
+.pr-2\.5 {
+  padding-right: 0.625rem;
 }
 
 .text-left {
@@ -3888,8 +3916,16 @@ input, textarea {
     margin-top: 0px;
   }
 
+  .sm\:grid {
+    display: grid;
+  }
+
   .sm\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sm\:grid-cols-7 {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
   }
 
   .sm\:text-center {
@@ -3921,6 +3957,10 @@ input, textarea {
 
   .md\:mb-24 {
     margin-bottom: 6rem;
+  }
+
+  .md\:mb-0 {
+    margin-bottom: 0px;
   }
 
   .md\:block {
@@ -3983,6 +4023,10 @@ input, textarea {
     grid-template-columns: repeat(7, minmax(0, 1fr));
   }
 
+  .md\:grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
   .md\:flex-row {
     flex-direction: row;
   }
@@ -4023,6 +4067,10 @@ input, textarea {
 
   .md\:pl-4 {
     padding-left: 1rem;
+  }
+
+  .md\:pb-0 {
+    padding-bottom: 0px;
   }
 
   .md\:text-base {
