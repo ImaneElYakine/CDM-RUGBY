@@ -23,6 +23,7 @@ input, textarea {
 .sortable-placeholder {
     background-color: lightgrey;
     height: 50px;
+    border: 1px solid #bbbbbb;
 }
 
 .modal {
