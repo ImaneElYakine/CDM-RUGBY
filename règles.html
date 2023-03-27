@@ -81,8 +81,8 @@
 <!-- INTRODUCTION  -->
 <div class="text-white flex justify-center items-center mb-10 flex-grow">
     <div class="md:w-2/5 w-5/6">
-        <p class="font-bold py-2">Règles du jeu</p>
-        <div>Consultez votre score ainsi que vos différents statistiques
+        <p class="font-bold py-2 text-lg ">Règles du jeu</p>
+        <div class="text-sm md:text-base">Consultez votre score ainsi que vos différents statistiques
             et comparez-vous aux meilleurs pronostiqueurs depuis le début du jeu.
         </div>
     </div>
@@ -112,14 +112,58 @@
         <div class="text-white flex items-center justify-left text-base font-bold">
             A. Phase de poule
         </div>
-        <div class="bg-white p-4 my-5 flex justify-center items-center">
+        <div class="bg-white p-4 my-5 flex-col justify-center items-center">
             Vous devez valider vos pronostics au plus tard 30 minutes avant le début du match d'ouverture de la compétition. Cela signifie que vous avez jusqu'à ce moment-là pour déterminer votre ordre de classement et le soumettre.
+            <p class="my-2 font-bold text-red-500">!! Les points peuvent être cumulés !!</p>
         </div>
         <div class="text-white flex items-center justify-left text-base font-bold">
             B. Phase finale
         </div>
-        <div class="bg-white p-4 my-5 flex justify-center items-center">
+        <div class="bg-white p-4 my-5 flex-col justify-center items-center">
             Vous devez valider votre pronostic pour chaque match au plus tard 30 minutes avant le début de chaque match. Cela signifie que vous avez jusqu'à ce moment-là pour déterminer votre pronostic et le soumettre.
+            <p class="my-2 ">Les points à gagner pour la phase finale sont les suivants : </p>
+            <table class="border m-4">
+                <thead>
+                <tr class="py-3 bg-gray-100">
+                    <th class="px-2"></th>
+                    <th class="px-2">Quarts de finale</th>
+                    <th class="px-2">Demi-finale</th>
+                    <th class="px-2">Petite finale</th>
+                    <th class="px-2">Finale</th>
+                </tr>
+                </thead>
+                <tbody class="text-center">
+                <tr class="border">
+                    <td>Score exacte</td>
+                    <td>8</td>
+                    <td>10</td>
+                    <td>12</td>
+                    <td>20</td>
+                </tr>
+                <tr class="border">
+                    <td>Issue du match</td>
+                    <td>6</td>
+                    <td>8</td>
+                    <td>8</td>
+                    <td>10</td>
+                </tr>
+                <tr class="border">
+                    <td>Score exact d’une des deux équipes</td>
+                    <td>2</td>
+                    <td>4</td>
+                    <td>6</td>
+                    <td>8</td>
+                </tr>
+                <tr class="">
+                    <td>Écart de point exact </td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>4</td>
+                    <td>6</td>
+                </tr>
+                </tbody>
+            </table>
+            <p class="my-2 font-bold text-red-500">!! Les points peuvent être cumulés !!</p>
         </div>
         <div class="text-white flex items-center justify-center text-lg font-bold py-2 mt-4">
             Score
@@ -140,8 +184,27 @@
             <p>•	La nationalité du meilleur marqueur d'essai : Pronostiquez la nationalité du joueur qui marquera le plus d'essais pendant la compétition.</p>
             <p>•	La nationalité du meilleur réalisateur : Pronostiquez la nationalité du joueur qui marquera le plus de points pendant la compétition.</p>
             <br>
-            <p>Vous aurez jusqu’à 30 minutes avant le début de la compétition pour valider vos pronostics bonus. Les résultats pour le pronostic bonus seront annoncés à la fin de la compétition.</p>
-
+            <p>Vous aurez jusqu’à 15 minutes avant le début de la compétition pour valider vos pronostics bonus. Les résultats pour le pronostic bonus seront annoncés à la fin de la compétition.</p>
+            <p class="my-2 ">Voici les points à gagner pour les pronostics bonus :</p>
+            <table class="border m-4">
+                <tr class="border py-3 ">
+                    <td class="px-2 border bg-gray-100">L’équipe championne du monde</td>
+                    <td class="px-2">60</td>
+                </tr>
+                <tr class="border">
+                    <td class="px-2 border bg-gray-100">Les 4 équipes en demi-finale</td>
+                    <td class="px-2">30</td>
+                </tr>
+                <tr class="border">
+                    <td class="px-2 border bg-gray-100">Nationalité du meilleur marqueur d’essai	</td>
+                    <td class="px-2">20</td>
+                </tr>
+                <tr class="border">
+                    <td class="px-2 border bg-gray-100">Nationalité du meilleur « réalisateur »</td>
+                    <td class="px-2">20</td>
+                </tr>
+            </table>
+            <p class="my-2 font-bold text-red-500">!! Les points peuvent être cumulés !!</p>
         </div>
     </div>
 </div>
