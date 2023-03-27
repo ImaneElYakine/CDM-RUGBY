@@ -770,6 +770,10 @@ video {
   margin: 0px;
 }
 
+.m-4 {
+  margin: 1rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -798,6 +802,11 @@ video {
 .my-\[5px\] {
   margin-top: 5px;
   margin-bottom: 5px;
+}
+
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .mt-3 {
@@ -888,6 +897,10 @@ video {
   margin-top: -0.75rem;
 }
 
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -928,6 +941,10 @@ video {
   display: grid;
 }
 
+.inline-grid {
+  display: inline-grid;
+}
+
 .hidden {
   display: none;
 }
@@ -942,10 +959,6 @@ video {
 
 .h-6 {
   height: 1.5rem;
-}
-
-.h-12 {
-  height: 3rem;
 }
 
 .h-0 {
@@ -1112,10 +1125,6 @@ video {
   width: 1.5rem;
 }
 
-.w-12 {
-  width: 3rem;
-}
-
 .w-5\/6 {
   width: 83.333333%;
 }
@@ -1216,8 +1225,12 @@ video {
   width: 0.25rem;
 }
 
-.w-3\/6 {
-  width: 50%;
+.w-4\/6 {
+  width: 66.666667%;
+}
+
+.w-3\/4 {
+  width: 75%;
 }
 
 .min-w-\[310px\] {
@@ -1534,8 +1547,12 @@ video {
   grid-template-columns: repeat(7, minmax(0, 1fr));
 }
 
-.grid-cols-4 {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .flex-row {
@@ -1560,10 +1577,6 @@ video {
 
 .items-center {
   align-items: center;
-}
-
-.justify-start {
-  justify-content: flex-start;
 }
 
 .justify-end {
@@ -2067,11 +2080,6 @@ video {
   padding-bottom: 0.75rem;
 }
 
-.py-5 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-}
-
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -2183,6 +2191,10 @@ video {
   padding-left: 0.5rem;
 }
 
+.pb-2 {
+  padding-bottom: 0.5rem;
+}
+
 .pt-12 {
   padding-top: 3rem;
 }
@@ -2191,8 +2203,8 @@ video {
   padding-top: 2rem;
 }
 
-.pb-2 {
-  padding-bottom: 0.5rem;
+.pr-2\.5 {
+  padding-right: 0.625rem;
 }
 
 .pt-2\.5 {
@@ -2221,18 +2233,6 @@ video {
 
 .pl-\[8px\] {
   padding-left: 8px;
-}
-
-.pl-1 {
-  padding-left: 0.25rem;
-}
-
-.pr-3 {
-  padding-right: 0.75rem;
-}
-
-.pr-2\.5 {
-  padding-right: 0.625rem;
 }
 
 .text-left {
@@ -3916,20 +3916,17 @@ input, textarea {
     margin-top: 0px;
   }
 
-  .sm\:grid {
-    display: grid;
-  }
-
   .sm\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .sm\:grid-cols-7 {
-    grid-template-columns: repeat(7, minmax(0, 1fr));
-  }
-
   .sm\:text-center {
     text-align: center;
+  }
+
+  .sm\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -3959,10 +3956,6 @@ input, textarea {
     margin-bottom: 6rem;
   }
 
-  .md\:mb-0 {
-    margin-bottom: 0px;
-  }
-
   .md\:block {
     display: block;
   }
@@ -3979,10 +3972,6 @@ input, textarea {
     display: none;
   }
 
-  .md\:h-12 {
-    height: 3rem;
-  }
-
   .md\:h-8 {
     height: 2rem;
   }
@@ -3995,20 +3984,28 @@ input, textarea {
     width: 10rem;
   }
 
-  .md\:w-12 {
-    width: 3rem;
+  .md\:w-3\/6 {
+    width: 50%;
   }
 
   .md\:w-8 {
     width: 2rem;
   }
 
-  .md\:w-3\/6 {
-    width: 50%;
-  }
-
   .md\:w-3\/5 {
     width: 60%;
+  }
+
+  .md\:w-3\/4 {
+    width: 75%;
+  }
+
+  .md\:w-2\/3 {
+    width: 66.666667%;
+  }
+
+  .md\:table-auto {
+    table-layout: auto;
   }
 
   .md\:grid-cols-4 {
@@ -4017,10 +4014,6 @@ input, textarea {
 
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .md\:grid-cols-7 {
-    grid-template-columns: repeat(7, minmax(0, 1fr));
   }
 
   .md\:grid-cols-1 {
@@ -4047,10 +4040,6 @@ input, textarea {
     padding: 1.5rem;
   }
 
-  .md\:p-5 {
-    padding: 1.25rem;
-  }
-
   .md\:px-4 {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -4061,16 +4050,16 @@ input, textarea {
     padding-right: 3rem;
   }
 
+  .md\:pb-0 {
+    padding-bottom: 0px;
+  }
+
   .md\:pr-4 {
     padding-right: 1rem;
   }
 
   .md\:pl-4 {
     padding-left: 1rem;
-  }
-
-  .md\:pb-0 {
-    padding-bottom: 0px;
   }
 
   .md\:text-base {
@@ -4102,6 +4091,11 @@ input, textarea {
   .lg\:px-3 {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
+  }
+
+  .lg\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
