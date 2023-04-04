@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" name="viewport">
     <title>Matchs passés</title>
-    <link rel="icon" type="image/png" href="/img/favicon_mediametrie.png" />
+    <link href="/img/favicon_mediametrie.png" rel="icon" type="image/png"/>
     <link href="css/output.css" rel="stylesheet">
 </head>
 
 <body class="font-mediametrie min-h-screen flex flex-col">
 <!-- POPUP COOKIE -->
-<div id="myModal" class="modal z-100">
+<div class="modal z-100" id="myModal">
     <div class="modal-content w-4/5 md:w-2/5 md:mt-12">
         <!-- Modal content -->
         <div class="relative bg-white ">
@@ -26,16 +26,26 @@
                     Médiamétrie respecte votre vie privée.
                 </p>
                 <p class="text-base leading-relaxed text-gray-700">
-                    Médiamétrie dépose des Cookies ou équivalents sur votre appareil et traitent des données relatives à votre navigation afin de mesurer notre audience et les performances du contenu, et de développer et améliorer nos produits et services, assurer la sécurité, prévenir de la fraude.
+                    Médiamétrie dépose des Cookies ou équivalents sur votre appareil et traitent des données relatives à
+                    votre navigation afin de mesurer notre audience et les performances du contenu, et de développer et
+                    améliorer nos produits et services, assurer la sécurité, prévenir de la fraude.
                 </p>
                 <p class="text-base leading-relaxed text-gray-700">
-                    Les cookies nous permettent d'analyser notre trafic. Nous ne partageons aucune information sur l'utilisation de notre site avec un tiers. En donnant votre consentement, vous acceptez le dépôt d'un cookie sur votre appareil nous permettant de suivre votre navigation.
+                    Les cookies nous permettent d'analyser notre trafic. Nous ne partageons aucune information sur
+                    l'utilisation de notre site avec un tiers. En donnant votre consentement, vous acceptez le dépôt
+                    d'un cookie sur votre appareil nous permettant de suivre votre navigation.
                 </p>
             </div>
             <!-- Modal footer -->
             <div class="flex items-center p-6 space-x-2 border-t border-gray-200">
-                <button onclick="hideModal()" type="button" class="text-white bg-blue-800 hover:bg-blue-900 focus:ring-4 font-medium text-sm px-5 py-2.5 text-center focus:ring-gray-300">J'accepte</button>
-                <button onclick="hideModal()" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-300  border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10">Je refuse</button>
+                <button class="text-white bg-blue-800 hover:bg-blue-900 focus:ring-4 font-medium text-sm px-5 py-2.5 text-center focus:ring-gray-300" onclick="hideModal()"
+                        type="button">
+                    J'accepte
+                </button>
+                <button class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-300  border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10" onclick="hideModal()"
+                        type="button">
+                    Je refuse
+                </button>
             </div>
         </div>
     </div>
@@ -48,10 +58,10 @@
     <div class="px-4 mx-auto md:flex md:items-center">
         <div class="flex justify-between items-center ">
             <a class="font-bold text-xl text-indigo-600 p-4" href="https://www.mediametrie.fr/fr" target="_blank">
-                <img class="md:w-40 w-32" src="img/logo.svg" alt="Médiamétrie">
+                <img alt="Médiamétrie" class="md:w-40 w-32" src="img/logo.svg">
             </a>
             <button class="md:hidden" id="navbar-toggle">
-                <img class="w-7" src="img/icon-menu.svg" alt="">
+                <img alt="" class="w-7" src="img/icon-menu.svg">
             </button>
         </div>
         <div class="hidden md:flex flex-col md:flex-row md:ml-auto mt-3 md:mt-0" id="navbar-collapse">
@@ -60,10 +70,13 @@
             <a class="p-2 lg:px-3 md:mx-2 transition-colors duration-300" href="classement.html">Classement</a>
             <a class="p-2 lg:px-3 md:mx-2 transition-colors duration-300 text-gold" href="bonus.html">Bonus</a>
             <a class="p-2 lg:px-3 md:mx-2 transition-colors duration-300" href="règles.html">Règles du jeu</a>
-            <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="hidden md:block flex items-center p-2 lg:px-3 md:mx-2" type="button"><img class="w-7" src="img/icon-user.svg"></button>
+            <button class="hidden md:block flex items-center p-2 lg:px-3 md:mx-2" data-dropdown-toggle="dropdown"
+                    id="dropdownDefaultButton" type="button"><img class="w-7"
+                                                                                                     src="img/icon-user.svg">
+            </button>
             <!-- Dropdown menu -->
-            <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 w-44">
-                <ul class="text-center py-2 text-sm text-gray-900" aria-labelledby="dropdownDefaultButton">
+            <div class="z-10 hidden bg-white divide-y divide-gray-100 w-44" id="dropdown">
+                <ul aria-labelledby="dropdownDefaultButton" class="text-center py-2 text-sm text-gray-900">
                     <li class="text-base font-bold">
                         Plaqueur Agile 1
                     </li>
@@ -83,25 +96,28 @@
 <div class="text-white flex justify-center items-center mb-10 flex-grow">
     <div class="w-4/5 md:w-3/6">
         <p class="font-bold py-2 text-lg">Matchs passés</p>
-        <div class="md:text-base">Voici un récapitulatif des poules et des matchs qui ont eu lieu. Vous pouvez consulter vos points pour chaque pronostic.
+        <div class="md:text-base">Voici un récapitulatif des poules et des matchs qui ont eu lieu. Vous pouvez consulter
+            vos points pour chaque pronostic.
         </div>
         <div class="pt-8">
-            <span id="btn-resultat-poules" class="font-bold pr-4 underline hover:cursor-pointer text-red-500">Poules</span>
-            <span id="btn-resultat-finale" class="px-4 hover:cursor-pointer">Phases finales</span>
+            <span class="font-bold pr-4 underline hover:cursor-pointer text-red-500"
+                  id="btn-resultat-poules">Poules</span>
+            <span class="px-4 hover:cursor-pointer" id="btn-resultat-finale">Phases finales</span>
         </div>
     </div>
 
 </div>
 <!-- POULES -->
-<div id="resultat-poules" class="flex justify-center items-center">
+<div class="flex justify-center items-center" id="resultat-poules">
     <div class=" grid  gap-4  lg:grid-cols-2 flex items-center w-full md:w-2/3 ">
         <!-- GROUPE A -->
         <div class="bg-white p-2">
-            <div class="flex items-center justify-center py-2 mx-8 font-bold text-base md:text-lg border-b">Groupe A</div>
+            <div class="flex items-center justify-center py-2 mx-8 font-bold text-base md:text-lg border-b">Groupe A
+            </div>
             <table class="table-auto mt-3 w-full md:text-base text-sm">
                 <thead>
                 <tr class="py-3">
-                    <th class="px-2">Classement</th>
+                    <th class="px-2 bg-blue-500">Classement</th>
                     <th class="px-2">Mon prono</th>
                     <th class="px-2">Points</th>
                 </tr>
@@ -109,12 +125,15 @@
                 <tbody>
                 <tr>
                     <td class="flex py-3">
-                        <div class="px-2 font-bold">1</div>
-                        <div class="px-2"><img draggable="false" alt="France" class="rounded-full w-6 h-6 md:w-8 md:h-8" src="img/drapeaux/France.png"/></div>
+                        <div class="px-2 font-bold ">1</div>
+                        <div class="px-2 "><img alt="France" class="rounded-full w-6 h-6 md:w-8 md:h-8" draggable="false"
+                                               src="img/drapeaux/France.png"/></div>
                         <div class=""> France</div>
                     </td>
                     <td class="py-3">
-                        <div class="px-2 float-left"><img draggable="false" alt="France" class="rounded-full w-6 h-6 md:w-8 md:h-8" src="img/drapeaux/France.png"/></div>
+                        <div class="px-2 float-left"><img alt="France" class="rounded-full w-6 h-6 md:w-8 md:h-8"
+                                                          draggable="false"
+                                                          src="img/drapeaux/France.png"/></div>
                         <div class="px-2"> France</div>
                     </td>
                     <td class="text-green-500 text-center">+1pt</td>
@@ -122,11 +141,15 @@
                 <tr>
                     <td class="flex py-3">
                         <div class="px-2 font-bold">2</div>
-                        <div class="px-2"><img draggable="false" alt="Allemagne" class="rounded-full w-6 h-6 md:w-8 md:h-8" src="img/drapeaux/Allemagne.png"/></div>
+                        <div class="px-2"><img alt="Allemagne" class="rounded-full w-6 h-6 md:w-8 md:h-8"
+                                               draggable="false"
+                                               src="img/drapeaux/Allemagne.png"/></div>
                         <div class=""> Allemagne</div>
                     </td>
                     <td class="py-3">
-                        <div class="px-2 float-left"><img draggable="false" alt="Danemark" class="rounded-full w-6 h-6 md:w-8 md:h-8" src="img/drapeaux/Danemark.png"/></div>
+                        <div class="px-2 float-left"><img alt="Danemark" class="rounded-full w-6 h-6 md:w-8 md:h-8"
+                                                          draggable="false"
+                                                          src="img/drapeaux/Danemark.png"/></div>
                         <div class="px-2"> Danemark</div>
                     </td>
                     <td class="text-red-500 text-center">+0pt</td>
@@ -134,11 +157,14 @@
                 <tr>
                     <td class="flex py-3">
                         <div class="px-2 font-bold">3</div>
-                        <div class="px-2"><img draggable="false" alt="Ecosse" class="rounded-full w-6 h-6 md:w-8 md:h-8" src="img/drapeaux/Ecosse.png"/></div>
+                        <div class="px-2"><img alt="Ecosse" class="rounded-full w-6 h-6 md:w-8 md:h-8" draggable="false"
+                                               src="img/drapeaux/Ecosse.png"/></div>
                         <div class=""> Ecosse</div>
                     </td>
                     <td class="py-3">
-                        <div class="px-2 float-left"><img draggable="false" alt="Ecosse" class="rounded-full w-6 h-6 md:w-8 md:h-8" src="img/drapeaux/Ecosse.png"/></div>
+                        <div class="px-2 float-left"><img alt="Ecosse" class="rounded-full w-6 h-6 md:w-8 md:h-8"
+                                                          draggable="false"
+                                                          src="img/drapeaux/Ecosse.png"/></div>
                         <div class="px-2"> Ecosse</div>
                     </td>
                     <td class="text-green-500 text-center">+1pt</td>
@@ -146,11 +172,15 @@
                 <tr>
                     <td class="flex py-3">
                         <div class="px-2 font-bold">4</div>
-                        <div class="px-2"><img draggable="false" alt="Danemark" class="rounded-full w-6 h-6 md:w-8 md:h-8" src="img/drapeaux/Danemark.png"/></div>
+                        <div class="px-2"><img alt="Danemark" class="rounded-full w-6 h-6 md:w-8 md:h-8"
+                                               draggable="false"
+                                               src="img/drapeaux/Danemark.png"/></div>
                         <div class=""> Danemark</div>
                     </td>
                     <td class="py-3">
-                        <div class="px-2 float-left"><img draggable="false" alt="Allemagne" class="rounded-full w-6 h-6 md:w-8 md:h-8" src="img/drapeaux/Allemagne.png"/></div>
+                        <div class="px-2 float-left"><img alt="Allemagne" class="rounded-full w-6 h-6 md:w-8 md:h-8"
+                                                          draggable="false"
+                                                          src="img/drapeaux/Allemagne.png"/></div>
                         <div class="px-2"> Allemagne</div>
                     </td>
                     <td class="text-red-500 text-center">+0pt</td>
@@ -158,11 +188,14 @@
                 <tr>
                     <td class="flex py-3">
                         <div class="px-2 font-bold">5</div>
-                        <div class="px-2"><img draggable="false" alt="Chili" class="rounded-full w-6 h-6 md:w-8 md:h-8" src="img/drapeaux/Chili.png"/></div>
+                        <div class="px-2"><img alt="Chili" class="rounded-full w-6 h-6 md:w-8 md:h-8" draggable="false"
+                                               src="img/drapeaux/Chili.png"/></div>
                         <div class=""> Chili</div>
                     </td>
                     <td class="py-3">
-                        <div class="px-2 float-left"><img draggable="false" alt="Chili" class="rounded-full w-6 h-6 md:w-8 md:h-8" src="img/drapeaux/Chili.png"/></div>
+                        <div class="px-2 float-left"><img alt="Chili" class="rounded-full w-6 h-6 md:w-8 md:h-8"
+                                                          draggable="false"
+                                                          src="img/drapeaux/Chili.png"/></div>
                         <div class="px-2"> Chili</div>
                     </td>
                     <td class="text-green-500 text-center">+1pt</td>
@@ -172,7 +205,8 @@
         </div>
         <!-- GROUPE B -->
         <div class="bg-white p-2">
-            <div class="flex items-center justify-center py-2 mx-8 font-bold text-base md:text-lg border-b">Groupe B</div>
+            <div class="flex items-center justify-center py-2 mx-8 font-bold text-base md:text-lg border-b">Groupe B
+            </div>
             <table class="table-auto mt-3 w-full md:text-base text-sm">
                 <thead>
                 <tr class="py-3">
@@ -185,11 +219,14 @@
                 <tr>
                     <td class="flex py-3">
                         <div class="px-2 font-bold">1</div>
-                        <div class="px-2"><img draggable="false" alt="France" class="rounded-full w-6 h-6 md:w-8 md:h-8" src="img/drapeaux/France.png"/></div>
+                        <div class="px-2"><img alt="France" class="rounded-full w-6 h-6 md:w-8 md:h-8" draggable="false"
+                                               src="img/drapeaux/France.png"/></div>
                         <div class=""> France</div>
                     </td>
                     <td class="py-3">
-                        <div class="px-2 float-left"><img draggable="false" alt="France" class="rounded-full w-6 h-6 md:w-8 md:h-8" src="img/drapeaux/France.png"/></div>
+                        <div class="px-2 float-left"><img alt="France" class="rounded-full w-6 h-6 md:w-8 md:h-8"
+                                                          draggable="false"
+                                                          src="img/drapeaux/France.png"/></div>
                         <div class="px-2"> France</div>
                     </td>
                     <td class="text-green-500 text-center">+1pt</td>
@@ -197,11 +234,15 @@
                 <tr>
                     <td class="flex py-3">
                         <div class="px-2 font-bold">2</div>
-                        <div class="px-2"><img draggable="false" alt="Allemagne" class="rounded-full w-6 h-6 md:w-8 md:h-8" src="img/drapeaux/Allemagne.png"/></div>
+                        <div class="px-2"><img alt="Allemagne" class="rounded-full w-6 h-6 md:w-8 md:h-8"
+                                               draggable="false"
+                                               src="img/drapeaux/Allemagne.png"/></div>
                         <div class=""> Allemagne</div>
                     </td>
                     <td class="py-3">
-                        <div class="px-2 float-left"><img draggable="false" alt="Danemark" class="rounded-full w-6 h-6 md:w-8 md:h-8" src="img/drapeaux/Danemark.png"/></div>
+                        <div class="px-2 float-left"><img alt="Danemark" class="rounded-full w-6 h-6 md:w-8 md:h-8"
+                                                          draggable="false"
+                                                          src="img/drapeaux/Danemark.png"/></div>
                         <div class="px-2"> Danemark</div>
                     </td>
                     <td class="text-red-500 text-center">+0pt</td>
@@ -209,11 +250,14 @@
                 <tr>
                     <td class="flex py-3">
                         <div class="px-2 font-bold">3</div>
-                        <div class="px-2"><img draggable="false" alt="Ecosse" class="rounded-full w-6 h-6 md:w-8 md:h-8" src="img/drapeaux/Ecosse.png"/></div>
+                        <div class="px-2"><img alt="Ecosse" class="rounded-full w-6 h-6 md:w-8 md:h-8" draggable="false"
+                                               src="img/drapeaux/Ecosse.png"/></div>
                         <div class=""> Ecosse</div>
                     </td>
                     <td class="py-3">
-                        <div class="px-2 float-left"><img draggable="false" alt="Ecosse" class="rounded-full w-6 h-6 md:w-8 md:h-8" src="img/drapeaux/Ecosse.png"/></div>
+                        <div class="px-2 float-left"><img alt="Ecosse" class="rounded-full w-6 h-6 md:w-8 md:h-8"
+                                                          draggable="false"
+                                                          src="img/drapeaux/Ecosse.png"/></div>
                         <div class="px-2"> Ecosse</div>
                     </td>
                     <td class="text-green-500 text-center">+1pt</td>
@@ -221,11 +265,15 @@
                 <tr>
                     <td class="flex py-3">
                         <div class="px-2 font-bold">4</div>
-                        <div class="px-2"><img draggable="false" alt="Danemark" class="rounded-full w-6 h-6 md:w-8 md:h-8" src="img/drapeaux/Danemark.png"/></div>
+                        <div class="px-2"><img alt="Danemark" class="rounded-full w-6 h-6 md:w-8 md:h-8"
+                                               draggable="false"
+                                               src="img/drapeaux/Danemark.png"/></div>
                         <div class=""> Danemark</div>
                     </td>
                     <td class="py-3">
-                        <div class="px-2 float-left"><img draggable="false" alt="Allemagne" class="rounded-full w-6 h-6 md:w-8 md:h-8" src="img/drapeaux/Allemagne.png"/></div>
+                        <div class="px-2 float-left"><img alt="Allemagne" class="rounded-full w-6 h-6 md:w-8 md:h-8"
+                                                          draggable="false"
+                                                          src="img/drapeaux/Allemagne.png"/></div>
                         <div class="px-2"> Allemagne</div>
                     </td>
                     <td class="text-red-500 text-center">+0pt</td>
@@ -233,11 +281,14 @@
                 <tr>
                     <td class="flex py-3">
                         <div class="px-2 font-bold">5</div>
-                        <div class="px-2"><img draggable="false" alt="Chili" class="rounded-full w-6 h-6 md:w-8 md:h-8" src="img/drapeaux/Chili.png"/></div>
+                        <div class="px-2"><img alt="Chili" class="rounded-full w-6 h-6 md:w-8 md:h-8" draggable="false"
+                                               src="img/drapeaux/Chili.png"/></div>
                         <div class=""> Chili</div>
                     </td>
                     <td class="py-3">
-                        <div class="px-2 float-left"><img draggable="false" alt="Chili" class="rounded-full w-6 h-6 md:w-8 md:h-8" src="img/drapeaux/Chili.png"/></div>
+                        <div class="px-2 float-left"><img alt="Chili" class="rounded-full w-6 h-6 md:w-8 md:h-8"
+                                                          draggable="false"
+                                                          src="img/drapeaux/Chili.png"/></div>
                         <div class="px-2"> Chili</div>
                     </td>
                     <td class="text-green-500 text-center">+1pt</td>
@@ -247,7 +298,8 @@
         </div>
         <!-- GROUPE C -->
         <div class="bg-white p-2">
-            <div class="flex items-center justify-center py-2 mx-8 font-bold text-base md:text-lg border-b">Groupe C</div>
+            <div class="flex items-center justify-center py-2 mx-8 font-bold text-base md:text-lg border-b">Groupe C
+            </div>
             <table class="table-auto mt-3 w-full md:text-base text-sm">
                 <thead>
                 <tr class="py-3">
@@ -260,11 +312,14 @@
                 <tr>
                     <td class="flex py-3">
                         <div class="px-2 font-bold">1</div>
-                        <div class="px-2"><img draggable="false" alt="France" class="rounded-full w-6 h-6 md:w-8 md:h-8" src="img/drapeaux/France.png"/></div>
+                        <div class="px-2"><img alt="France" class="rounded-full w-6 h-6 md:w-8 md:h-8" draggable="false"
+                                               src="img/drapeaux/France.png"/></div>
                         <div class=""> France</div>
                     </td>
                     <td class="py-3">
-                        <div class="px-2 float-left"><img draggable="false" alt="France" class="rounded-full w-6 h-6 md:w-8 md:h-8" src="img/drapeaux/France.png"/></div>
+                        <div class="px-2 float-left"><img alt="France" class="rounded-full w-6 h-6 md:w-8 md:h-8"
+                                                          draggable="false"
+                                                          src="img/drapeaux/France.png"/></div>
                         <div class="px-2"> France</div>
                     </td>
                     <td class="text-green-500 text-center">+1pt</td>
@@ -272,11 +327,15 @@
                 <tr>
                     <td class="flex py-3">
                         <div class="px-2 font-bold">2</div>
-                        <div class="px-2"><img draggable="false" alt="Allemagne" class="rounded-full w-6 h-6 md:w-8 md:h-8" src="img/drapeaux/Allemagne.png"/></div>
+                        <div class="px-2"><img alt="Allemagne" class="rounded-full w-6 h-6 md:w-8 md:h-8"
+                                               draggable="false"
+                                               src="img/drapeaux/Allemagne.png"/></div>
                         <div class=""> Allemagne</div>
                     </td>
                     <td class="py-3">
-                        <div class="px-2 float-left"><img draggable="false" alt="Danemark" class="rounded-full w-6 h-6 md:w-8 md:h-8" src="img/drapeaux/Danemark.png"/></div>
+                        <div class="px-2 float-left"><img alt="Danemark" class="rounded-full w-6 h-6 md:w-8 md:h-8"
+                                                          draggable="false"
+                                                          src="img/drapeaux/Danemark.png"/></div>
                         <div class="px-2"> Danemark</div>
                     </td>
                     <td class="text-red-500 text-center">+0pt</td>
@@ -284,11 +343,14 @@
                 <tr>
                     <td class="flex py-3">
                         <div class="px-2 font-bold">3</div>
-                        <div class="px-2"><img draggable="false" alt="Ecosse" class="rounded-full w-6 h-6 md:w-8 md:h-8" src="img/drapeaux/Ecosse.png"/></div>
+                        <div class="px-2"><img alt="Ecosse" class="rounded-full w-6 h-6 md:w-8 md:h-8" draggable="false"
+                                               src="img/drapeaux/Ecosse.png"/></div>
                         <div class=""> Ecosse</div>
                     </td>
                     <td class="py-3">
-                        <div class="px-2 float-left"><img draggable="false" alt="Ecosse" class="rounded-full w-6 h-6 md:w-8 md:h-8" src="img/drapeaux/Ecosse.png"/></div>
+                        <div class="px-2 float-left"><img alt="Ecosse" class="rounded-full w-6 h-6 md:w-8 md:h-8"
+                                                          draggable="false"
+                                                          src="img/drapeaux/Ecosse.png"/></div>
                         <div class="px-2"> Ecosse</div>
                     </td>
                     <td class="text-green-500 text-center">+1pt</td>
@@ -296,11 +358,15 @@
                 <tr>
                     <td class="flex py-3">
                         <div class="px-2 font-bold">4</div>
-                        <div class="px-2"><img draggable="false" alt="Danemark" class="rounded-full w-6 h-6 md:w-8 md:h-8" src="img/drapeaux/Danemark.png"/></div>
+                        <div class="px-2"><img alt="Danemark" class="rounded-full w-6 h-6 md:w-8 md:h-8"
+                                               draggable="false"
+                                               src="img/drapeaux/Danemark.png"/></div>
                         <div class=""> Danemark</div>
                     </td>
                     <td class="py-3">
-                        <div class="px-2 float-left"><img draggable="false" alt="Allemagne" class="rounded-full w-6 h-6 md:w-8 md:h-8" src="img/drapeaux/Allemagne.png"/></div>
+                        <div class="px-2 float-left"><img alt="Allemagne" class="rounded-full w-6 h-6 md:w-8 md:h-8"
+                                                          draggable="false"
+                                                          src="img/drapeaux/Allemagne.png"/></div>
                         <div class="px-2"> Allemagne</div>
                     </td>
                     <td class="text-red-500 text-center">+0pt</td>
@@ -308,11 +374,14 @@
                 <tr>
                     <td class="flex py-3">
                         <div class="px-2 font-bold">5</div>
-                        <div class="px-2"><img draggable="false" alt="Chili" class="rounded-full w-6 h-6 md:w-8 md:h-8" src="img/drapeaux/Chili.png"/></div>
+                        <div class="px-2"><img alt="Chili" class="rounded-full w-6 h-6 md:w-8 md:h-8" draggable="false"
+                                               src="img/drapeaux/Chili.png"/></div>
                         <div class=""> Chili</div>
                     </td>
                     <td class="py-3">
-                        <div class="px-2 float-left"><img draggable="false" alt="Chili" class="rounded-full w-6 h-6 md:w-8 md:h-8" src="img/drapeaux/Chili.png"/></div>
+                        <div class="px-2 float-left"><img alt="Chili" class="rounded-full w-6 h-6 md:w-8 md:h-8"
+                                                          draggable="false"
+                                                          src="img/drapeaux/Chili.png"/></div>
                         <div class="px-2"> Chili</div>
                     </td>
                     <td class="text-green-500 text-center">+1pt</td>
@@ -322,191 +391,188 @@
         </div>
         <!-- GROUPE D -->
         <div class="bg-white p-2">
-        <div class="flex items-center justify-center py-2 mx-8 font-bold text-base md:text-lg border-b">Groupe D</div>
-        <table class="table-auto mt-3 w-full md:text-base text-sm">
-            <thead>
-            <tr class="py-3">
-                <th class="px-2">Classement</th>
-                <th class="px-2">Mon prono</th>
-                <th class="px-2">Points</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td class="flex py-3">
-                    <div class="px-2 font-bold">1</div>
-                    <div class="px-2"><img draggable="false" alt="France" class="rounded-full w-6 h-6 md:w-8 md:h-8" src="img/drapeaux/France.png"/></div>
-                    <div class=""> France</div>
-                </td>
-                <td class="py-3">
-                    <div class="px-2 float-left"><img draggable="false" alt="France" class="rounded-full w-6 h-6 md:w-8 md:h-8" src="img/drapeaux/France.png"/></div>
-                    <div class="px-2"> France</div>
-                </td>
-                <td class="text-green-500 text-center">+1pt</td>
-            </tr>
-            <tr>
-                <td class="flex py-3">
-                    <div class="px-2 font-bold">2</div>
-                    <div class="px-2"><img draggable="false" alt="Allemagne" class="rounded-full w-6 h-6 md:w-8 md:h-8" src="img/drapeaux/Allemagne.png"/></div>
-                    <div class=""> Allemagne</div>
-                </td>
-                <td class="py-3">
-                    <div class="px-2 float-left"><img draggable="false" alt="Danemark" class="rounded-full w-6 h-6 md:w-8 md:h-8" src="img/drapeaux/Danemark.png"/></div>
-                    <div class="px-2"> Danemark</div>
-                </td>
-                <td class="text-red-500 text-center">+0pt</td>
-            </tr>
-            <tr>
-                <td class="flex py-3">
-                    <div class="px-2 font-bold">3</div>
-                    <div class="px-2"><img draggable="false" alt="Ecosse" class="rounded-full w-6 h-6 md:w-8 md:h-8" src="img/drapeaux/Ecosse.png"/></div>
-                    <div class=""> Ecosse</div>
-                </td>
-                <td class="py-3">
-                    <div class="px-2 float-left"><img draggable="false" alt="Ecosse" class="rounded-full w-6 h-6 md:w-8 md:h-8" src="img/drapeaux/Ecosse.png"/></div>
-                    <div class="px-2"> Ecosse</div>
-                </td>
-                <td class="text-green-500 text-center">+1pt</td>
-            </tr>
-            <tr>
-                <td class="flex py-3">
-                    <div class="px-2 font-bold">4</div>
-                    <div class="px-2"><img draggable="false" alt="Danemark" class="rounded-full w-6 h-6 md:w-8 md:h-8" src="img/drapeaux/Danemark.png"/></div>
-                    <div class=""> Danemark</div>
-                </td>
-                <td class="py-3">
-                    <div class="px-2 float-left"><img draggable="false" alt="Allemagne" class="rounded-full w-6 h-6 md:w-8 md:h-8" src="img/drapeaux/Allemagne.png"/></div>
-                    <div class="px-2"> Allemagne</div>
-                </td>
-                <td class="text-red-500 text-center">+0pt</td>
-            </tr>
-            <tr>
-                <td class="flex py-3">
-                    <div class="px-2 font-bold">5</div>
-                    <div class="px-2"><img draggable="false" alt="Chili" class="rounded-full w-6 h-6 md:w-8 md:h-8" src="img/drapeaux/Chili.png"/></div>
-                    <div class=""> Chili</div>
-                </td>
-                <td class="py-3">
-                    <div class="px-2 float-left"><img draggable="false" alt="Chili" class="rounded-full w-6 h-6 md:w-8 md:h-8" src="img/drapeaux/Chili.png"/></div>
-                    <div class="px-2"> Chili</div>
-                </td>
-                <td class="text-green-500 text-center">+1pt</td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
+            <div class="flex items-center justify-center py-2 mx-8 font-bold text-base md:text-lg border-b">Groupe D
+            </div>
+            <table class="table-auto mt-3 w-full md:text-base text-sm">
+                <thead>
+                <tr class="py-3">
+                    <th class="px-2">Classement</th>
+                    <th class="px-2">Mon prono</th>
+                    <th class="px-2">Points</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="flex py-3">
+                        <div class="px-2 font-bold">1</div>
+                        <div class="px-2"><img alt="France" class="rounded-full w-6 h-6 md:w-8 md:h-8" draggable="false"
+                                               src="img/drapeaux/France.png"/></div>
+                        <div class=""> France</div>
+                    </td>
+                    <td class="py-3">
+                        <div class="px-2 float-left"><img alt="France" class="rounded-full w-6 h-6 md:w-8 md:h-8"
+                                                          draggable="false"
+                                                          src="img/drapeaux/France.png"/></div>
+                        <div class="px-2"> France</div>
+                    </td>
+                    <td class="text-green-500 text-center">+1pt</td>
+                </tr>
+                <tr>
+                    <td class="flex py-3">
+                        <div class="px-2 font-bold">2</div>
+                        <div class="px-2"><img alt="Allemagne" class="rounded-full w-6 h-6 md:w-8 md:h-8"
+                                               draggable="false"
+                                               src="img/drapeaux/Allemagne.png"/></div>
+                        <div class=""> Allemagne</div>
+                    </td>
+                    <td class="py-3">
+                        <div class="px-2 float-left"><img alt="Danemark" class="rounded-full w-6 h-6 md:w-8 md:h-8"
+                                                          draggable="false"
+                                                          src="img/drapeaux/Danemark.png"/></div>
+                        <div class="px-2"> Danemark</div>
+                    </td>
+                    <td class="text-red-500 text-center">+0pt</td>
+                </tr>
+                <tr>
+                    <td class="flex py-3">
+                        <div class="px-2 font-bold">3</div>
+                        <div class="px-2"><img alt="Ecosse" class="rounded-full w-6 h-6 md:w-8 md:h-8" draggable="false"
+                                               src="img/drapeaux/Ecosse.png"/></div>
+                        <div class=""> Ecosse</div>
+                    </td>
+                    <td class="py-3">
+                        <div class="px-2 float-left"><img alt="Ecosse" class="rounded-full w-6 h-6 md:w-8 md:h-8"
+                                                          draggable="false"
+                                                          src="img/drapeaux/Ecosse.png"/></div>
+                        <div class="px-2"> Ecosse</div>
+                    </td>
+                    <td class="text-green-500 text-center">+1pt</td>
+                </tr>
+                <tr>
+                    <td class="flex py-3">
+                        <div class="px-2 font-bold">4</div>
+                        <div class="px-2"><img alt="Danemark" class="rounded-full w-6 h-6 md:w-8 md:h-8"
+                                               draggable="false"
+                                               src="img/drapeaux/Danemark.png"/></div>
+                        <div class=""> Danemark</div>
+                    </td>
+                    <td class="py-3">
+                        <div class="px-2 float-left"><img alt="Allemagne" class="rounded-full w-6 h-6 md:w-8 md:h-8"
+                                                          draggable="false"
+                                                          src="img/drapeaux/Allemagne.png"/></div>
+                        <div class="px-2"> Allemagne</div>
+                    </td>
+                    <td class="text-red-500 text-center">+0pt</td>
+                </tr>
+                <tr>
+                    <td class="flex py-3">
+                        <div class="px-2 font-bold">5</div>
+                        <div class="px-2"><img alt="Chili" class="rounded-full w-6 h-6 md:w-8 md:h-8" draggable="false"
+                                               src="img/drapeaux/Chili.png"/></div>
+                        <div class=""> Chili</div>
+                    </td>
+                    <td class="py-3">
+                        <div class="px-2 float-left"><img alt="Chili" class="rounded-full w-6 h-6 md:w-8 md:h-8"
+                                                          draggable="false"
+                                                          src="img/drapeaux/Chili.png"/></div>
+                        <div class="px-2"> Chili</div>
+                    </td>
+                    <td class="text-green-500 text-center">+1pt</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
 
 <!-- FINALES -->
-<div id="resultat-finale" class=" flex-col justify-center items-center hidden">
+<div class="flex-col justify-center items-center hidden" id="resultat-finale">
     <!-- FINAL -->
     <div class="text-white py-4 flex items-center justify-center text-base md:text-lg font-bold">
         Finale
     </div>
-    <div class="flex items-center justify-center ">
-        <div class="text-gray-900 grid md:grid-cols-1 m-2 p-4 bg-white flex justify-center items-center w-full md:w-3/6">
-            <div class="flex justify-center items-center">
-                <div class="flex justify-center items-center px-2">
-                    <img class="w-8 h-8 rounded-full" src="img/drapeaux/France.png" alt="">
-                </div>
-                <div class="flex justify-center items-center text-base md:text-lg">
-                    France
-                </div>
-                <div class="flex justify-center items-center">
-                    <span class="w-8 h-8 text-center font-bold text-base md:text-xl">3</span>
-                </div>
-                <div class="flex justify-center items-center">
-                    <span class="w-8 h-8 text-center font-bold text-base md:text-xl">3</span>
-                </div>
-                <div class="flex justify-center items-center text-base md:text-lg">
-                    Allemagne
-                </div>
-                <div class="flex justify-center items-center px-2">
-                    <img class="w-8 h-8 rounded-full" src="img/drapeaux/Allemagne.png" alt="">
-                </div>
-            </div>
-            <div class="flex justify-center items-center col-span-7 mb-2 text-red-500">
-                <span> 2 - 5</span><span class="ml-2">(+0pt)</span>
-            </div>
-            <div class="flex justify-center items-center col-span-7 text-sm">
-                <div>Samedi 27 juin - 18h</div>
-            </div>
-            <div class="flex justify-center col-span-7 text-sm">
-                Marseille
-            </div>
+    <div class="flex items-center justify-center">
+        <div class="text-gray-900 grid grid-cols-6 md:grid-cols-7 m-2 md:p-4 bg-white flex justify-center items-center w-full md:w-3/6 mx-auto">
+        <div class="col-span-6 md:col-span-7 text-center">Samedi 27 juin</div>
+        <div class="col-span-6 md:col-span-7 text-center">à 18 h à Marseille</div>
+        <div class="col-span-2 md:col-span-3 flex justify-end">
+            <img alt="" class="md:w-8 md:h-8 w-6 h-6 rounded-full" src="img/drapeaux/France.png">
+            <div class="ml-4 md:text-lg">France</div>
         </div>
+        <div class="text-center col-span-2 md:col-span-1 font-bold md:text-lg">
+            <span>3</span>
+            <span class="mx-2">-</span>
+            <span>3</span>
+        </div>
+        <div class="col-span-2 md:col-span-3 flex justify-start">
+            <div class="mr-4 md:text-lg">Allemagne</div>
+            <img alt="" class="md:w-8 md:h-8 w-6 h-6 rounded-full" src="img/drapeaux/Allemagne.png">
+        </div>
+        <div class="col-span-6 md:col-span-7 text-center justify-center text-red-500 text-sm">
+            <span>2</span>
+            <span class="">-</span>
+            <span>5</span>
+            <span class="ml-2">(+0pts)</span>
+        </div>
+
+    </div>
     </div>
     <!-- DEMIS -->
     <div class="text-white py-4 flex items-center justify-center text-base md:text-lg font-bold">
         Demies-finales
     </div>
     <!-- Match 1 -->
-    <div class="flex items-center justify-center ">
-        <div class="text-gray-900 grid md:grid-cols-1 m-2 p-4 bg-white flex justify-center items-center w-full  md:w-3/6">
-            <div class="flex justify-center items-center">
-            <div class="flex justify-center items-center px-2">
-                <img class="w-8 h-8 rounded-full" src="img/drapeaux/France.png" alt="">
+    <div class="flex items-center justify-center">
+        <div class="text-gray-900 grid grid-cols-6 md:grid-cols-7 m-2 md:p-4 bg-white flex justify-center items-center w-full md:w-3/6 mx-auto">
+            <div class="col-span-6 md:col-span-7 text-center">Samedi 27 juin</div>
+            <div class="col-span-6 md:col-span-7 text-center">à 18 h à Marseille</div>
+            <div class="col-span-2 md:col-span-3 flex justify-end">
+                <img alt="" class="md:w-8 md:h-8 w-6 h-6 rounded-full" src="img/drapeaux/France.png">
+                <div class="ml-4 md:text-lg">France</div>
             </div>
-            <div class="flex justify-center items-center text-base md:text-lg">
-                France
+            <div class="text-center col-span-2 md:col-span-1 font-bold md:text-lg">
+                <span>3</span>
+                <span class="mx-2">-</span>
+                <span>3</span>
             </div>
-            <div class="flex justify-center items-center">
-                <span class="w-8 h-8 text-center font-bold text-base md:text-xl">3</span>
+            <div class="col-span-2 md:col-span-3 flex justify-start">
+                <div class="mr-4 md:text-lg">Allemagne</div>
+                <img alt="" class="md:w-8 md:h-8 w-6 h-6 rounded-full" src="img/drapeaux/Allemagne.png">
             </div>
-            <div class="flex justify-center items-center">
-                <span class="w-8 h-8 text-center font-bold text-base md:text-xl">1</span>
+            <div class="col-span-6 md:col-span-7 text-center justify-center text-red-500 text-sm">
+                <span>2</span>
+                <span class="">-</span>
+                <span>5</span>
+                <span class="ml-2">(+0pts)</span>
             </div>
-            <div class="flex justify-center items-center text-base md:text-lg">
-                Chili
-            </div>
-            <div class="flex justify-center items-center px-2">
-                <img class="w-8 h-8 rounded-full" src="img/drapeaux/Chili.png" alt="">
-            </div>
-            </div>
-            <div class="flex justify-center items-center col-span-7 mb-2 text-green-500">
-                <span> 3 - 1</span><span class="ml-2">(+2pt)</span>
-            </div>
-            <div class="flex justify-center items-center col-span-7 text-sm">
-                <div>Samedi 27 juin - 18h</div>
-            </div>
-            <div class="flex justify-center col-span-7 text-sm">
-                Marseille
-            </div>
+
         </div>
     </div>
     <!-- Match 2 -->
-    <div class="flex items-center justify-center ">
-        <div class="text-gray-900 grid md:grid-cols-1 m-2 p-4 bg-white flex justify-center items-center w-full  md:w-3/6">
-            <div class="flex justify-center items-center">
-                <div class="flex justify-center items-center px-2">
-                    <img class="w-8 h-8 rounded-full" src="img/drapeaux/France.png" alt="">
-                </div>
-                <div class="flex justify-center items-center text-base md:text-lg">
-                    France
-                </div>
-                <div class="flex justify-center items-center">
-                    <span class="w-8 h-8 text-center font-bold text-base md:text-xl">3</span>
-                </div>
-                <div class="flex justify-center items-center">
-                    <span class="w-8 h-8 text-center font-bold text-base md:text-xl">3</span>
-                </div>
-                <div class="flex justify-center items-center text-base md:text-lg">
-                    Allemagne
-                </div>
-                <div class="flex justify-center items-center px-2">
-                    <img class="w-8 h-8 rounded-full" src="img/drapeaux/Allemagne.png" alt="">
-                </div>
+    <div class="flex items-center justify-center">
+        <div class="text-gray-900 grid grid-cols-6 md:grid-cols-7 m-2 md:p-4 bg-white flex justify-center items-center w-full md:w-3/6 mx-auto">
+            <div class="col-span-6 md:col-span-7 text-center">Samedi 27 juin</div>
+            <div class="col-span-6 md:col-span-7 text-center">à 18 h à Marseille</div>
+            <div class="col-span-2 md:col-span-3 flex justify-end">
+                <img alt="" class="md:w-8 md:h-8 w-6 h-6 rounded-full" src="img/drapeaux/France.png">
+                <div class="ml-4 md:text-lg">France</div>
             </div>
-            <div class="flex justify-center items-center col-span-7 mb-2 text-red-500">
-                <span> 2 - 5</span><span class="ml-2">(+0pt)</span>
+            <div class="text-center col-span-2 md:col-span-1 font-bold md:text-lg">
+                <span>3</span>
+                <span class="mx-2">-</span>
+                <span>3</span>
             </div>
-            <div class="flex justify-center items-center col-span-7 text-sm">
-                <div>Samedi 27 juin - 18h</div>
+            <div class="col-span-2 md:col-span-3 flex justify-start">
+                <div class="mr-4 md:text-lg">Allemagne</div>
+                <img alt="" class="md:w-8 md:h-8 w-6 h-6 rounded-full" src="img/drapeaux/Allemagne.png">
             </div>
-            <div class="flex justify-center col-span-7 text-sm">
-                Marseille
+            <div class="col-span-6 md:col-span-7 text-center justify-center text-red-500 text-sm">
+                <span>2</span>
+                <span class="">-</span>
+                <span>5</span>
+                <span class="ml-2">(+0pts)</span>
             </div>
+
         </div>
     </div>
     <!-- QUARTS -->
@@ -514,139 +580,111 @@
         Quarts de finale
     </div>
     <!-- Match 1 -->
-    <div class="flex items-center justify-center ">
-        <div class="text-gray-900 grid md:grid-cols-1 m-2 p-4 bg-white flex justify-center items-center w-full  md:w-3/6">
-            <div class="flex justify-center items-center">
-                <div class="flex justify-center items-center px-2">
-                    <img class="w-8 h-8 rounded-full" src="img/drapeaux/France.png" alt="">
-                </div>
-                <div class="flex justify-center items-center text-base md:text-lg">
-                    France
-                </div>
-                <div class="flex justify-center items-center">
-                    <span class="w-8 h-8 text-center font-bold text-base md:text-xl">3</span>
-                </div>
-                <div class="flex justify-center items-center">
-                    <span class="w-8 h-8 text-center font-bold text-base md:text-xl">3</span>
-                </div>
-                <div class="flex justify-center items-center text-base md:text-lg">
-                    Allemagne
-                </div>
-                <div class="flex justify-center items-center px-2">
-                    <img class="w-8 h-8 rounded-full" src="img/drapeaux/Allemagne.png" alt="">
-                </div>
+    <div class="flex items-center justify-center">
+        <div class="text-gray-900 grid grid-cols-6 md:grid-cols-7 m-2 md:p-4 bg-white flex justify-center items-center w-full md:w-3/6 mx-auto">
+            <div class="col-span-6 md:col-span-7 text-center">Samedi 27 juin</div>
+            <div class="col-span-6 md:col-span-7 text-center">à 18 h à Marseille</div>
+            <div class="col-span-2 md:col-span-3 flex justify-end">
+                <img alt="" class="md:w-8 md:h-8 w-6 h-6 rounded-full" src="img/drapeaux/France.png">
+                <div class="ml-4 md:text-lg">France</div>
             </div>
-            <div class="flex justify-center items-center col-span-7 mb-2 text-red-500">
-                <span> 2 - 5</span><span class="ml-2">(+0pt)</span>
+            <div class="text-center col-span-2 md:col-span-1 font-bold md:text-lg">
+                <span>3</span>
+                <span class="mx-2">-</span>
+                <span>3</span>
             </div>
-            <div class="flex justify-center items-center col-span-7 text-sm">
-                <div>Samedi 27 juin - 18h</div>
+            <div class="col-span-2 md:col-span-3 flex justify-start">
+                <div class="mr-4 md:text-lg">Allemagne</div>
+                <img alt="" class="md:w-8 md:h-8 w-6 h-6 rounded-full" src="img/drapeaux/Allemagne.png">
             </div>
-            <div class="flex justify-center col-span-7 text-sm">
-                Marseille
+            <div class="col-span-6 md:col-span-7 text-center justify-center text-red-500 text-sm">
+                <span>2</span>
+                <span class="">-</span>
+                <span>5</span>
+                <span class="ml-2">(+0pts)</span>
             </div>
+
         </div>
     </div>
     <!-- Match 2 -->
-    <div class="flex items-center justify-center ">
-        <div class="text-gray-900 grid md:grid-cols-1 m-2 p-4 bg-white flex justify-center items-center w-full md:w-3/6">
-            <div class="flex justify-center items-center">
-                <div class="flex justify-center items-center px-2">
-                    <img class="w-8 h-8 rounded-full" src="img/drapeaux/France.png" alt="">
-                </div>
-                <div class="flex justify-center items-center text-base md:text-lg">
-                    France
-                </div>
-                <div class="flex justify-center items-center">
-                    <span class="w-8 h-8 text-center font-bold text-base md:text-xl">3</span>
-                </div>
-                <div class="flex justify-center items-center">
-                    <span class="w-8 h-8 text-center font-bold text-base md:text-xl">3</span>
-                </div>
-                <div class="flex justify-center items-center text-base md:text-lg">
-                    Allemagne
-                </div>
-                <div class="flex justify-center items-center px-2">
-                    <img class="w-8 h-8 rounded-full" src="img/drapeaux/Allemagne.png" alt="">
-                </div>
+    <div class="flex items-center justify-center">
+        <div class="text-gray-900 grid grid-cols-6 md:grid-cols-7 m-2 md:p-4 bg-white flex justify-center items-center w-full md:w-3/6 mx-auto">
+            <div class="col-span-6 md:col-span-7 text-center">Samedi 27 juin</div>
+            <div class="col-span-6 md:col-span-7 text-center">à 18 h à Marseille</div>
+            <div class="col-span-2 md:col-span-3 flex justify-end">
+                <img alt="" class="md:w-8 md:h-8 w-6 h-6 rounded-full" src="img/drapeaux/France.png">
+                <div class="ml-4 md:text-lg">France</div>
             </div>
-            <div class="flex justify-center items-center col-span-7 mb-2 text-red-500">
-                <span> 2 - 5</span><span class="ml-2">(+0pt)</span>
+            <div class="text-center col-span-2 md:col-span-1 font-bold md:text-lg">
+                <span>3</span>
+                <span class="mx-2">-</span>
+                <span>3</span>
             </div>
-            <div class="flex justify-center items-center col-span-7 text-sm">
-                <div>Samedi 27 juin - 18h</div>
+            <div class="col-span-2 md:col-span-3 flex justify-start">
+                <div class="mr-4 md:text-lg">Allemagne</div>
+                <img alt="" class="md:w-8 md:h-8 w-6 h-6 rounded-full" src="img/drapeaux/Allemagne.png">
             </div>
-            <div class="flex justify-center col-span-7 text-sm">
-                Marseille
+            <div class="col-span-6 md:col-span-7 text-center justify-center text-red-500 text-sm">
+                <span>2</span>
+                <span class="">-</span>
+                <span>5</span>
+                <span class="ml-2">(+0pts)</span>
             </div>
+
         </div>
     </div>
     <!-- Match 3 -->
-    <div class="flex items-center justify-center ">
-        <div class="text-gray-900 grid md:grid-cols-1 m-2 p-4 bg-white flex justify-center items-center w-full md:w-3/6">
-            <div class="flex justify-center items-center">
-                <div class="flex justify-center items-center px-2">
-                    <img class="w-8 h-8 rounded-full" src="img/drapeaux/France.png" alt="">
-                </div>
-                <div class="flex justify-center items-center text-base md:text-lg">
-                    France
-                </div>
-                <div class="flex justify-center items-center">
-                    <span class="w-8 h-8 text-center font-bold text-base md:text-xl">3</span>
-                </div>
-                <div class="flex justify-center items-center">
-                    <span class="w-8 h-8 text-center font-bold text-base md:text-xl">3</span>
-                </div>
-                <div class="flex justify-center items-center text-base md:text-lg">
-                    Allemagne
-                </div>
-                <div class="flex justify-center items-center px-2">
-                    <img class="w-8 h-8 rounded-full" src="img/drapeaux/Allemagne.png" alt="">
-                </div>
+    <div class="flex items-center justify-center">
+        <div class="text-gray-900 grid grid-cols-6 md:grid-cols-7 m-2 md:p-4 bg-white flex justify-center items-center w-full md:w-3/6 mx-auto">
+            <div class="col-span-6 md:col-span-7 text-center">Samedi 27 juin</div>
+            <div class="col-span-6 md:col-span-7 text-center">à 18 h à Marseille</div>
+            <div class="col-span-2 md:col-span-3 flex justify-end">
+                <img alt="" class="md:w-8 md:h-8 w-6 h-6 rounded-full" src="img/drapeaux/France.png">
+                <div class="ml-4 md:text-lg">France</div>
             </div>
-            <div class="flex justify-center items-center col-span-7 mb-2 text-red-500">
-                <span> 2 - 5</span><span class="ml-2">(+0pt)</span>
+            <div class="text-center col-span-2 md:col-span-1 font-bold md:text-lg">
+                <span>3</span>
+                <span class="mx-2">-</span>
+                <span>3</span>
             </div>
-            <div class="flex justify-center items-center col-span-7 text-sm">
-                <div>Samedi 27 juin - 18h</div>
+            <div class="col-span-2 md:col-span-3 flex justify-start">
+                <div class="mr-4 md:text-lg">Allemagne</div>
+                <img alt="" class="md:w-8 md:h-8 w-6 h-6 rounded-full" src="img/drapeaux/Allemagne.png">
             </div>
-            <div class="flex justify-center col-span-7 text-sm">
-                Marseille
+            <div class="col-span-6 md:col-span-7 text-center justify-center text-red-500 text-sm">
+                <span>2</span>
+                <span class="">-</span>
+                <span>5</span>
+                <span class="ml-2">(+0pts)</span>
             </div>
+
         </div>
     </div>
     <!-- Match 4 -->
-    <div class="flex items-center justify-center ">
-        <div class="text-gray-900 grid md:grid-cols-1 m-2 p-4 bg-white flex justify-center items-center w-full md:w-3/6">
-            <div class="flex justify-center items-center">
-                <div class="flex justify-center items-center px-2">
-                    <img class="w-8 h-8 rounded-full" src="img/drapeaux/France.png" alt="">
-                </div>
-                <div class="flex justify-center items-center text-base md:text-lg">
-                    France
-                </div>
-                <div class="flex justify-center items-center">
-                    <span class="w-8 h-8 text-center font-bold text-base md:text-xl">3</span>
-                </div>
-                <div class="flex justify-center items-center">
-                    <span class="w-8 h-8 text-center font-bold text-base md:text-xl">3</span>
-                </div>
-                <div class="flex justify-center items-center text-base md:text-lg">
-                    Allemagne
-                </div>
-                <div class="flex justify-center items-center px-2">
-                    <img class="w-8 h-8 rounded-full" src="img/drapeaux/Allemagne.png" alt="">
-                </div>
+    <div class="flex items-center justify-center">
+        <div class="text-gray-900 grid grid-cols-6 md:grid-cols-7 m-2 md:p-4 bg-white flex justify-center items-center w-full md:w-3/6 mx-auto">
+            <div class="col-span-6 md:col-span-7 text-center">Samedi 27 juin</div>
+            <div class="col-span-6 md:col-span-7 text-center">à 18 h à Marseille</div>
+            <div class="col-span-2 md:col-span-3 flex justify-end">
+                <img alt="" class="md:w-8 md:h-8 w-6 h-6 rounded-full" src="img/drapeaux/France.png">
+                <div class="ml-4 md:text-lg">France</div>
             </div>
-            <div class="flex justify-center items-center col-span-7 mb-2 text-red-500">
-                <span> 2 - 5</span><span class="ml-2">(+0pt)</span>
+            <div class="text-center col-span-2 md:col-span-1 font-bold md:text-lg">
+                <span>3</span>
+                <span class="mx-2">-</span>
+                <span>3</span>
             </div>
-            <div class="flex justify-center items-center col-span-7 text-sm">
-                <div>Samedi 27 juin - 18h</div>
+            <div class="col-span-2 md:col-span-3 flex justify-start">
+                <div class="mr-4 md:text-lg">Allemagne</div>
+                <img alt="" class="md:w-8 md:h-8 w-6 h-6 rounded-full" src="img/drapeaux/Allemagne.png">
             </div>
-            <div class="flex justify-center col-span-7 text-sm">
-                Marseille
+            <div class="col-span-6 md:col-span-7 text-center justify-center text-red-500 text-sm">
+                <span>2</span>
+                <span class="">-</span>
+                <span>5</span>
+                <span class="ml-2">(+0pts)</span>
             </div>
+
         </div>
     </div>
 </div>
@@ -654,24 +692,26 @@
 <!-- CGU/Mentions légales -->
 <footer class="mt-6 z-0">
     <div class="w-full mx-auto container md:p-6 p-4 md:flex md:items-center md:justify-between">
-      <span class="text-sm text-white sm:text-center opacity-80">© 2023 <a target="_blank" href="https://www.mediametrie.fr/fr" class="hover:underline">Médiamétrie</a>
+      <span class="text-sm text-white sm:text-center opacity-80">© 2023 <a class="hover:underline"
+                                                                           href="https://www.mediametrie.fr/fr"
+                                                                           target="_blank">Médiamétrie</a>
     </span>
         <ul class="flex flex-wrap items-center mt-3 text-sm text-white opacity-80 sm:mt-0">
             <li>
-                <span onclick="displayModal()" class="mr-4 hover:underline md:mr-6 hover:cursor-pointer">Cookies</span>
+                <span class="mr-4 hover:underline md:mr-6 hover:cursor-pointer" onclick="displayModal()">Cookies</span>
             </li>
             <li>
-                <a href="#" class="mr-4 hover:underline md:mr-6">Mentions légales</a>
+                <a class="mr-4 hover:underline md:mr-6" href="#">Mentions légales</a>
             </li>
             <li>
-                <a href="#" class="mr-4 hover:underline md:mr-6">C.G.U</a>
+                <a class="mr-4 hover:underline md:mr-6" href="#">C.G.U</a>
             </li>
         </ul>
     </div>
 </footer>
 
-<script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
-<script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 <script src="https://unpkg.com/flowbite@1.4.4/dist/flowbite.js"></script>
 <script src="script.js"></script>
