@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" name="viewport">
     <title>Bonus</title>
-    <link rel="icon" type="image/png" href="/img/favicon_mediametrie.png" />
+    <link href="/img/favicon_mediametrie.png" rel="icon" type="image/png"/>
     <link href="css/output.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" rel="stylesheet"/>
 </head>
 
 <body class="font-mediametrie min-h-screen flex flex-col">
 <!-- POPUP COOKIE -->
-<div id="myModal" class="modal z-100">
+<div class="modal z-100" id="myModal">
     <div class="modal-content w-4/5 md:w-2/5 md:mt-12">
         <!-- Modal content -->
         <div class="relative bg-white ">
@@ -27,16 +27,26 @@
                     Médiamétrie respecte votre vie privée.
                 </p>
                 <p class="text-base leading-relaxed text-gray-700">
-                    Médiamétrie dépose des Cookies ou équivalents sur votre appareil et traitent des données relatives à votre navigation afin de mesurer notre audience et les performances du contenu, et de développer et améliorer nos produits et services, assurer la sécurité, prévenir de la fraude.
+                    Médiamétrie dépose des Cookies ou équivalents sur votre appareil et traitent des données relatives à
+                    votre navigation afin de mesurer notre audience et les performances du contenu, et de développer et
+                    améliorer nos produits et services, assurer la sécurité, prévenir de la fraude.
                 </p>
                 <p class="text-base leading-relaxed text-gray-700">
-                    Les cookies nous permettent d'analyser notre trafic. Nous ne partageons aucune information sur l'utilisation de notre site avec un tiers. En donnant votre consentement, vous acceptez le dépôt d'un cookie sur votre appareil nous permettant de suivre votre navigation.
+                    Les cookies nous permettent d'analyser notre trafic. Nous ne partageons aucune information sur
+                    l'utilisation de notre site avec un tiers. En donnant votre consentement, vous acceptez le dépôt
+                    d'un cookie sur votre appareil nous permettant de suivre votre navigation.
                 </p>
             </div>
             <!-- Modal footer -->
             <div class="flex items-center p-6 space-x-2 border-t border-gray-200">
-                <button onclick="hideModal()" type="button" class="text-white bg-primary-700 hover:bg-blue-900 focus:ring-4 font-medium text-sm px-5 py-2.5 text-center focus:ring-gray-300">J'accepte</button>
-                <button onclick="hideModal()" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-300  border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10">Je refuse</button>
+                <button class="text-white bg-primary-700 hover:bg-blue-900 focus:ring-4 font-medium text-sm px-5 py-2.5 text-center focus:ring-gray-300" onclick="hideModal()"
+                        type="button">
+                    J'accepte
+                </button>
+                <button class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-300  border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10" onclick="hideModal()"
+                        type="button">
+                    Je refuse
+                </button>
             </div>
         </div>
     </div>
@@ -48,10 +58,10 @@
     <div class="px-4 mx-auto md:flex md:items-center">
         <div class="flex justify-between items-center ">
             <a class="font-bold text-xl text-indigo-600 p-4" href="https://www.mediametrie.fr/fr" target="_blank">
-                <img class="md:w-40 w-32" src="img/logo.svg" alt="Médiamétrie">
+                <img alt="Médiamétrie" class="md:w-40 w-32" src="img/logo.svg">
             </a>
             <button class="md:hidden" id="navbar-toggle">
-                <img class="w-7" src="img/icon-menu.svg" alt="">
+                <img alt="" class="w-7" src="img/icon-menu.svg">
             </button>
         </div>
         <div class="hidden md:flex flex-col md:flex-row md:ml-auto mt-3 md:mt-0" id="navbar-collapse">
@@ -60,10 +70,13 @@
             <a class="p-2 lg:px-4 md:mx-2 transition-colors duration-300" href="classement.html">Classement</a>
             <a class="p-2 lg:px-4 md:mx-2 text-red-500 font-bold" href="bonus.html">Bonus</a>
             <a class="p-2 lg:px-4 md:mx-2 transition-colors duration-300" href="règles.html">Règles du jeu</a>
-            <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="hidden md:block flex items-center p-2 lg:px-3 md:mx-2" type="button"><img class="w-7" src="img/icon-user.svg"></button>
+            <button class="hidden md:block flex items-center p-2 lg:px-3 md:mx-2" data-dropdown-toggle="dropdown"
+                    id="dropdownDefaultButton" type="button"><img class="w-7"
+                                                                                                     src="img/icon-user.svg">
+            </button>
             <!-- Dropdown menu -->
-            <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 w-44">
-                <ul class="text-center py-2 text-sm text-gray-900" aria-labelledby="dropdownDefaultButton">
+            <div class="z-10 hidden bg-white divide-y divide-gray-100 w-44" id="dropdown">
+                <ul aria-labelledby="dropdownDefaultButton" class="text-center py-2 text-sm text-gray-900">
                     <li class="text-base font-bold">
                         Plaqueur Agile 1
                     </li>
@@ -84,56 +97,75 @@
     <div class="md:w-3/5 w-5/6">
         <p class="font-bold pb-2 text-lg">Bonus</p>
         <div class="text-sm lg:text-base">
-        <p>Les <b>pronostics bonus</b> vous permettront de maximiser vos chances de gagner ! Chaque point compte, alors ne laissez pas passer cette opportunité de vous démarquer.</p>
-        <p class="my-2">En plus de vos pronostics pour les matchs en phase de poule et en phase finale, vous pouvez également pronostiquer l’équipe championne, les 4 demi-finalistes, la nationalité du meilleur marqueur d’essai et la nationalité du meilleur réalisateur. </p>
-        <p>Vous pouvez modifier vos pronostics bonus <b>jusqu’à 15 minutes avant le début de la compétition. </b></p>
-        <p class="my-2">Rendez-vous dans l’onglet « Règles du jeu » pour voir le tableau des points et dans l’onglet « Classement » pour voir les points bonus gagnés à la fin de la compétition !</p>
-    </div> </div>
+            <p>Les <b>pronostics bonus</b> vous permettront de maximiser vos chances de gagner ! Chaque point compte,
+                alors ne laissez pas passer cette opportunité de vous démarquer.</p>
+            <p class="my-2">En plus de vos pronostics pour les matchs en phase de poule et en phase finale, vous pouvez
+                également pronostiquer l’équipe championne, les 4 demi-finalistes, la nationalité du meilleur marqueur
+                d’essai et la nationalité du meilleur réalisateur. </p>
+            <p>Vous pouvez modifier vos pronostics bonus <b>jusqu’à 15 minutes avant le début de la compétition. </b>
+            </p>
+            <p class="my-2">Rendez-vous dans l’onglet « Règles du jeu » pour voir le tableau des points et dans l’onglet
+                « Classement » pour voir les points bonus gagnés à la fin de la compétition !</p>
+        </div>
+    </div>
 </div>
 <div class="flex justify-center items-center">
     <div class=" grid sm:grid-cols-2 gap-4  md:grid-cols-2 flex items-center md:w-3/5 w-5/6 z-10">
         <!-- EQUIPE CHAMPIONNE -->
         <div class="bg-white ">
-            <div class="py-4 px-8">
-                <h4 class="text-lg font-semibold text-center border-b pb-4">
+            <div class="pt-2 px-8">
+                <h4 class="md:text-lg font-semibold text-center border-b pb-2">
                     Equipe championne
                 </h4>
             </div>
-            <div class="py-4 px-8">
+            <div class="py-2 px-8">
                 <div class="flex justify-center">
                     <div class="mb-3 xl:w-96">
-                        <label for="bonus-champion" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Choisir 1 équipe</label>
-                            <select class="bonus" disabled id="bonus-champion" data-te-select-init>
-                                <option value="0"></option>
-                                <option value="FR" data-te-select-icon="./img/drapeaux/France.png">France</option>
-                                <option value="EN" data-te-select-icon="./img/drapeaux/Angleterre.png">Angleterre</option>
-                                <option value="ME" data-te-select-icon="./img/drapeaux/Mexique.png">Mexique</option>
-                                <option value="DA" data-te-select-icon="./img/drapeaux/Danemark.png">Danemark </option>
-                                <option value="AL" data-te-select-icon="./img/drapeaux/Allemagne.png">Allemagne</option>
-                            </select>
+                        <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                               for="bonus-champion">Choisir 1
+                            équipe</label>
+                        <select class="bonus" data-te-select-init disabled id="bonus-champion">
+                            <option value="0"></option>
+                            <option data-te-select-icon="./img/drapeaux/France.png" value="FR">France</option>
+                            <option data-te-select-icon="./img/drapeaux/Angleterre.png" value="EN">Angleterre</option>
+                            <option data-te-select-icon="./img/drapeaux/Mexique.png" value="ME">Mexique</option>
+                            <option data-te-select-icon="./img/drapeaux/Danemark.png" value="DA">Danemark</option>
+                            <option data-te-select-icon="./img/drapeaux/Allemagne.png" value="AL">Allemagne</option>
+                        </select>
                     </div>
                 </div>
             </div>
         </div>
         <!-- DEMI-FINALES -->
         <div class="bg-white ">
-            <div class="py-4 px-8">
-                <h4 class="text-lg font-semibold text-center border-b pb-4">
+            <div class="pt-2 px-8">
+                <h4 class="md:text-lg font-semibold text-center border-b pb-2">
                     Demi-finales
                 </h4>
             </div>
-            <div class="py-4 px-8">
+            <div class="py-2 px-8">
                 <div class="flex justify-center">
                     <div class="mb-3 xl:w-96">
-                        <label for="bonus-demi" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Choisir 4 équipes</label>
-                            <select class="bonus" disabled id="bonus-demi" data-te-select-init
-                                    multiple data-te-select-all="false">
-                                <option class="option-demi" value="FR" data-te-select-icon="./img/drapeaux/France.png">France</option>
-                                <option class="option-demi" value="EN" data-te-select-icon="./img/drapeaux/Angleterre.png">Angleterre</option>
-                                <option class="option-demi" value="ME" data-te-select-icon="./img/drapeaux/Mexique.png">Mexique</option>
-                                <option class="option-demi" value="DA" data-te-select-icon="./img/drapeaux/Danemark.png">Danemark </option>
-                                <option class="option-demi" value="AL" data-te-select-icon="./img/drapeaux/Allemagne.png">Allemagne</option>
-                            </select>
+                        <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="bonus-demi">Choisir
+                            4 équipes</label>
+                        <select class="bonus" data-te-select-all="false" data-te-select-init disabled
+                                id="bonus-demi" multiple>
+                            <option class="option-demi" data-te-select-icon="./img/drapeaux/France.png" value="FR">
+                                France
+                            </option>
+                            <option class="option-demi" data-te-select-icon="./img/drapeaux/Angleterre.png" value="EN">
+                                Angleterre
+                            </option>
+                            <option class="option-demi" data-te-select-icon="./img/drapeaux/Mexique.png" value="ME">
+                                Mexique
+                            </option>
+                            <option class="option-demi" data-te-select-icon="./img/drapeaux/Danemark.png" value="DA">
+                                Danemark
+                            </option>
+                            <option class="option-demi" data-te-select-icon="./img/drapeaux/Allemagne.png" value="AL">
+                                Allemagne
+                            </option>
+                        </select>
                     </div>
                 </div>
             </div>
@@ -141,22 +173,24 @@
 
         <!-- MEILLEUR MARQUEUR D'ESSSAI -->
         <div class="bg-white ">
-            <div class="py-4 px-8">
-                <h4 class="text-lg font-semibold text-center border-b pb-4">
+            <div class="pt-2 px-8">
+                <h4 class="md:text-lg font-semibold text-center border-b pb-2">
                     Meilleur marqueur d'essai
                 </h4>
             </div>
-            <div class="py-4 px-8">
+            <div class="py-2 px-8">
                 <div class="flex justify-center">
                     <div class="mb-3 xl:w-96">
-                        <label for="bonus-marqueur" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Choisir 1 nationalité</label>
-                        <select disabled id="bonus-marqueur" data-te-select-init class="bonus">
+                        <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                               for="bonus-marqueur">Choisir 1
+                            nationalité</label>
+                        <select class="bonus" data-te-select-init disabled id="bonus-marqueur">
                             <option value="0"></option>
-                            <option value="FR" data-te-select-icon="./img/drapeaux/France.png">France</option>
-                            <option value="EN" data-te-select-icon="./img/drapeaux/Angleterre.png">Angleterre</option>
-                            <option value="ME" data-te-select-icon="./img/drapeaux/Mexique.png">Mexique</option>
-                            <option value="DA" data-te-select-icon="./img/drapeaux/Danemark.png">Danemark </option>
-                            <option value="AL" data-te-select-icon="./img/drapeaux/Allemagne.png">Allemagne</option>
+                            <option data-te-select-icon="./img/drapeaux/France.png" value="FR">France</option>
+                            <option data-te-select-icon="./img/drapeaux/Angleterre.png" value="EN">Angleterre</option>
+                            <option data-te-select-icon="./img/drapeaux/Mexique.png" value="ME">Mexique</option>
+                            <option data-te-select-icon="./img/drapeaux/Danemark.png" value="DA">Danemark</option>
+                            <option data-te-select-icon="./img/drapeaux/Allemagne.png" value="AL">Allemagne</option>
                         </select>
 
                     </div>
@@ -165,22 +199,24 @@
         </div>
         <!-- MEILLEUR RÉALISATEUR -->
         <div class="bg-white ">
-            <div class="py-4 px-8">
-                <h4 class="text-lg font-semibold text-center border-b pb-4">
+            <div class="pt-2 px-8">
+                <h4 class="text-lg font-semibold text-center border-b pb-2">
                     Meilleur réalisateur
                 </h4>
             </div>
-            <div class="py-4 px-8">
+            <div class="py-2 px-8">
                 <div class="flex justify-center">
                     <div class="mb-3 xl:w-96">
-                        <label for="bonus-realisateur" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Choisir 1 nationalité</label>
-                        <select id="bonus-realisateur" data-te-select-init class="bonus" disabled>
+                        <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                               for="bonus-realisateur">Choisir 1
+                            nationalité</label>
+                        <select class="bonus" data-te-select-init disabled id="bonus-realisateur">
                             <option value="0"></option>
-                            <option value="FR" data-te-select-icon="./img/drapeaux/France.png">France</option>
-                            <option value="EN" data-te-select-icon="./img/drapeaux/Angleterre.png">Angleterre</option>
-                            <option value="ME" data-te-select-icon="./img/drapeaux/Mexique.png">Mexique</option>
-                            <option value="DA" data-te-select-icon="./img/drapeaux/Danemark.png">Danemark </option>
-                            <option value="AL" data-te-select-icon="./img/drapeaux/Allemagne.png">Allemagne</option>
+                            <option data-te-select-icon="./img/drapeaux/France.png" value="FR">France</option>
+                            <option data-te-select-icon="./img/drapeaux/Angleterre.png" value="EN">Angleterre</option>
+                            <option data-te-select-icon="./img/drapeaux/Mexique.png" value="ME">Mexique</option>
+                            <option data-te-select-icon="./img/drapeaux/Danemark.png" value="DA">Danemark</option>
+                            <option data-te-select-icon="./img/drapeaux/Allemagne.png" value="AL">Allemagne</option>
                         </select>
                     </div>
                 </div>
@@ -191,8 +227,8 @@
 
 <!-- BOUTONS MODIFICATION -->
 <div class="flex justify-center mt-8">
-    <button id="btn-modifier-bonus" class="bg-gray-100 font-bold py-2 px-4 inline-flex items-center z-10">
-        <img src="./img/icon-modif.svg" id="btn-icon" class="w-6 h-6 mr-2">
+    <button class="bg-gray-100 font-bold py-2 px-4 inline-flex items-center z-10" id="btn-modifier-bonus">
+        <img class="w-6 h-6 mr-2" id="btn-icon" src="./img/icon-modif.svg">
         <span id="btn-text">Modifier</span>
     </button>
 </div>
@@ -201,25 +237,27 @@
 <!-- CGU/Mentions légales -->
 <footer class="mt-6">
     <div class="w-full mx-auto container md:p-6 p-4 md:flex md:items-center md:justify-between z-0">
-      <span class="text-sm text-white sm:text-center opacity-80">© 2023 <a target="_blank" href="https://www.mediametrie.fr/fr" class="hover:underline">Médiamétrie</a>
+      <span class="text-sm text-white sm:text-center opacity-80">© 2023 <a class="hover:underline"
+                                                                           href="https://www.mediametrie.fr/fr"
+                                                                           target="_blank">Médiamétrie</a>
     </span>
         <ul class="flex flex-wrap items-center mt-3 text-sm text-white opacity-80 sm:mt-0">
             <li>
-                <span onclick="displayModal()" class="mr-4 hover:underline md:mr-6 hover:cursor-pointer">Cookies</span>
+                <span class="mr-4 hover:underline md:mr-6 hover:cursor-pointer" onclick="displayModal()">Cookies</span>
             </li>
             <li>
-                <a href="#" class="mr-4 hover:underline md:mr-6">Mentions légales</a>
+                <a class="mr-4 hover:underline md:mr-6" href="#">Mentions légales</a>
             </li>
             <li>
-                <a href="#" class="mr-4 hover:underline md:mr-6">C.G.U</a>
+                <a class="mr-4 hover:underline md:mr-6" href="#">C.G.U</a>
             </li>
 
         </ul>
     </div>
 </footer>
 
-<script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
-<script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 <script src="https://unpkg.com/flowbite@1.4.4/dist/flowbite.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>

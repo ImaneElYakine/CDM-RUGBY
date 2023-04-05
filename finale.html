@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" name="viewport">
     <title>Phase finale</title>
-    <link rel="icon" type="image/png" href="/img/favicon_mediametrie.png" />
+    <link href="/img/favicon_mediametrie.png" rel="icon" type="image/png"/>
     <link href="css/output.css" rel="stylesheet">
 </head>
 
 <body class="font-mediametrie min-h-screen flex flex-col">
 <!-- POPUP COOKIE -->
-<div id="myModal" class="modal z-100">
+<div class="modal z-100" id="myModal">
     <div class="modal-content w-4/5 md:w-2/5 md:mt-12">
         <!-- Modal content -->
         <div class="relative bg-white ">
@@ -26,16 +26,26 @@
                     Médiamétrie respecte votre vie privée.
                 </p>
                 <p class="text-base leading-relaxed text-gray-700">
-                    Médiamétrie dépose des Cookies ou équivalents sur votre appareil et traitent des données relatives à votre navigation afin de mesurer notre audience et les performances du contenu, et de développer et améliorer nos produits et services, assurer la sécurité, prévenir de la fraude.
+                    Médiamétrie dépose des Cookies ou équivalents sur votre appareil et traitent des données relatives à
+                    votre navigation afin de mesurer notre audience et les performances du contenu, et de développer et
+                    améliorer nos produits et services, assurer la sécurité, prévenir de la fraude.
                 </p>
                 <p class="text-base leading-relaxed text-gray-700">
-                    Les cookies nous permettent d'analyser notre trafic. Nous ne partageons aucune information sur l'utilisation de notre site avec un tiers. En donnant votre consentement, vous acceptez le dépôt d'un cookie sur votre appareil nous permettant de suivre votre navigation.
+                    Les cookies nous permettent d'analyser notre trafic. Nous ne partageons aucune information sur
+                    l'utilisation de notre site avec un tiers. En donnant votre consentement, vous acceptez le dépôt
+                    d'un cookie sur votre appareil nous permettant de suivre votre navigation.
                 </p>
             </div>
             <!-- Modal footer -->
             <div class="flex items-center p-6 space-x-2 border-t border-gray-200">
-                <button onclick="hideModal()" type="button" class="text-white bg-blue-800 hover:bg-blue-900 focus:ring-4 font-medium text-sm px-5 py-2.5 text-center focus:ring-gray-300">J'accepte</button>
-                <button onclick="hideModal()" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-300  border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10">Je refuse</button>
+                <button class="text-white bg-blue-800 hover:bg-blue-900 focus:ring-4 font-medium text-sm px-5 py-2.5 text-center focus:ring-gray-300" onclick="hideModal()"
+                        type="button">
+                    J'accepte
+                </button>
+                <button class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-300  border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10" onclick="hideModal()"
+                        type="button">
+                    Je refuse
+                </button>
             </div>
         </div>
     </div>
@@ -48,22 +58,26 @@
     <div class="px-4 mx-auto md:flex md:items-center">
         <div class="flex justify-between items-center ">
             <a class="font-bold text-xl text-indigo-600 p-4" href="https://www.mediametrie.fr/fr" target="_blank">
-                <img class="md:w-40 w-32" src="img/logo.svg" alt="Médiamétrie">
+                <img alt="Médiamétrie" class="md:w-40 w-32" src="img/logo.svg">
             </a>
             <button class="md:hidden" id="navbar-toggle">
-                <img class="w-7" src="img/icon-menu.svg" alt="">
+                <img alt="" class="w-7" src="img/icon-menu.svg">
             </button>
         </div>
         <div class="hidden md:flex flex-col md:flex-row md:ml-auto mt-3 md:mt-0" id="navbar-collapse">
             <a class="p-2 lg:px-4 md:mx-2 text-red-500 font-bold" href="finale.html">En ce moment</a>
             <a class="p-2 lg:px-4 md:mx-2 transition-colors duration-300" href="matchs-passés.html">Matchs passés</a>
             <a class="p-2 lg:px-4 md:mx-2 transition-colors duration-300" href="classement.html">Classement</a>
-            <a id="bonus-menu" class="p-2 lg:px-4 md:mx-2 transition-colors duration-300 text-gold animate-bounce" href="bonus.html">Bonus</a>
+            <a class="p-2 lg:px-4 md:mx-2 transition-colors duration-300 text-gold animate-bounce" href="bonus.html"
+               id="bonus-menu">Bonus</a>
             <a class="p-2 lg:px-4 md:mx-2 transition-colors duration-300" href="règles.html">Règles du jeu</a>
-            <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="hidden md:block flex items-center p-2 lg:px-3 md:mx-2" type="button"><img class="w-7" src="img/icon-user.svg"></button>
+            <button class="hidden md:block flex items-center p-2 lg:px-3 md:mx-2" data-dropdown-toggle="dropdown"
+                    id="dropdownDefaultButton" type="button"><img class="w-7"
+                                                                                                     src="img/icon-user.svg">
+            </button>
             <!-- Dropdown menu -->
-            <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 w-44">
-                <ul class="text-center py-2 text-sm text-gray-900" aria-labelledby="dropdownDefaultButton">
+            <div class="z-10 hidden bg-white divide-y divide-gray-100 w-44" id="dropdown">
+                <ul aria-labelledby="dropdownDefaultButton" class="text-center py-2 text-sm text-gray-900">
                     <li class="text-base font-bold">
                         Plaqueur Agile 1
                     </li>
@@ -83,8 +97,10 @@
 <div class="text-white flex justify-center items-center mb-10 flex-grow">
     <div class="w-4/5 text-sm md:text-base">
         <p class="font-bold py-2 text-lg">Phase finale</p>
-        <p class="my-2">Pour la phase finale, vous devez pronostiquer le score final pour chacune des confrontations. Vous pouvez modifier vos pronostics au plus tard 15 minutes avant le début de chaque match.</p>
-        <p>Rendez-vous dans l’onglet « Règles du jeu » pour voir le tableau des points et dans l’onglet « Matchs passés » pour voir les points gagnés à chaque match.</p>
+        <p class="my-2">Pour la phase finale, vous devez pronostiquer le score final pour chacune des confrontations.
+            Vous pouvez modifier vos pronostics au plus tard 15 minutes avant le début de chaque match.</p>
+        <p>Rendez-vous dans l’onglet « Règles du jeu » pour voir le tableau des points et dans l’onglet « Matchs passés
+            » pour voir les points gagnés à chaque match.</p>
     </div>
 </div>
 <!-- PHASE FINALE -->
@@ -97,26 +113,26 @@
         <div class="text-gray-900 m-5 p-5 bg-white">
             <div class="md:flex justify-center items-center">
                 <div class="flex justify-center items-center px-2">
-                    <img class="w-8 h-8 rounded-full" src="img/drapeaux/France.png" alt="">
+                    <img alt="" class="w-8 h-8 rounded-full" src="img/drapeaux/France.png">
                 </div>
                 <div class="flex justify-center items-center text-lg px-2">
                     France
                 </div>
                 <div class="flex justify-center items-center px-2 md:pb-0 pb-2">
                     <label>
-                        <input class="score1 w-8 h-8 text-center font-bold bg-gray-400" value="2" type="tel" disabled>
+                        <input class="score1 w-8 h-8 text-center font-bold bg-gray-400" disabled type="tel" value="2">
                     </label>
                 </div>
                 <div class="flex justify-center items-center px-2">
                     <label>
-                        <input class="score1 w-8 h-8 text-center font-bold bg-gray-400" value="2" type="tel" disabled>
+                        <input class="score1 w-8 h-8 text-center font-bold bg-gray-400" disabled type="tel" value="2">
                     </label>
                 </div>
                 <div class="flex justify-center items-center text-lg px-2">
                     Allemagne
                 </div>
                 <div class="flex justify-center items-center px-2">
-                    <img class="w-8 h-8 rounded-full" src="img/drapeaux/Allemagne.png" alt="">
+                    <img alt="" class="w-8 h-8 rounded-full" src="img/drapeaux/Allemagne.png">
                 </div>
             </div>
             <div class="flex justify-center items-center text-sm">
@@ -126,8 +142,8 @@
                 Marseille
             </div>
             <div class="flex justify-center col-span-7 text-sm mt-4">
-                <button id="btn-modif-1" class="bg-gray-100 font-bold py-2 px-4 inline-flex items-center z-50">
-                    <img src="./img/icon-modif.svg" class="w-6 h-6 mr-2">
+                <button class="bg-gray-100 font-bold py-2 px-4 inline-flex items-center z-50" id="btn-modif-1">
+                    <img class="w-6 h-6 mr-2" src="./img/icon-modif.svg">
                     <span>Modifier</span>
                 </button>
             </div>
@@ -136,26 +152,26 @@
         <div class="text-gray-900 m-5 p-5 bg-white">
             <div class="md:flex justify-center items-center">
                 <div class="flex justify-center items-center px-2">
-                    <img class="w-8 h-8 rounded-full" src="img/drapeaux/France.png" alt="">
+                    <img alt="" class="w-8 h-8 rounded-full" src="img/drapeaux/France.png">
                 </div>
                 <div class="flex justify-center items-center text-lg px-2">
                     France
                 </div>
                 <div class="flex justify-center items-center px-2 md:pb-0 pb-2">
                     <label>
-                        <input class="score2 w-8 h-8 text-center font-bold bg-gray-400" value="2" type="tel" disabled>
+                        <input class="score2 w-8 h-8 text-center font-bold bg-gray-400" disabled type="tel" value="2">
                     </label>
                 </div>
                 <div class="flex justify-center items-center px-2">
                     <label>
-                        <input class="score2 w-8 h-8 text-center font-bold bg-gray-400" value="2" type="tel" disabled>
+                        <input class="score2 w-8 h-8 text-center font-bold bg-gray-400" disabled type="tel" value="2">
                     </label>
                 </div>
                 <div class="flex justify-center items-center text-lg px-2">
                     Allemagne
                 </div>
                 <div class="flex justify-center items-center px-2">
-                    <img class="w-8 h-8 rounded-full" src="img/drapeaux/Allemagne.png" alt="">
+                    <img alt="" class="w-8 h-8 rounded-full" src="img/drapeaux/Allemagne.png">
                 </div>
             </div>
             <div class="flex justify-center items-center text-sm">
@@ -165,8 +181,8 @@
                 Marseille
             </div>
             <div class="flex justify-center col-span-7 text-sm mt-4">
-                <button id="btn-modif-2" class="bg-gray-100 font-bold py-2 px-4 inline-flex items-center z-50">
-                    <img src="./img/icon-modif.svg" class="w-6 h-6 mr-2">
+                <button class="bg-gray-100 font-bold py-2 px-4 inline-flex items-center z-50" id="btn-modif-2">
+                    <img class="w-6 h-6 mr-2" src="./img/icon-modif.svg">
                     <span>Modifier</span>
                 </button>
             </div>
@@ -175,26 +191,26 @@
         <div class="text-gray-900 m-5 p-5 bg-white">
             <div class="md:flex justify-center items-center">
                 <div class="flex justify-center items-center px-2">
-                    <img class="w-8 h-8 rounded-full" src="img/drapeaux/France.png" alt="">
+                    <img alt="" class="w-8 h-8 rounded-full" src="img/drapeaux/France.png">
                 </div>
                 <div class="flex justify-center items-center text-lg px-2">
                     France
                 </div>
                 <div class="flex justify-center items-center px-2 md:pb-0 pb-2">
                     <label>
-                        <input class="score3 w-8 h-8 text-center font-bold bg-gray-400" value="2" type="tel" disabled>
+                        <input class="score3 w-8 h-8 text-center font-bold bg-gray-400" disabled type="tel" value="2">
                     </label>
                 </div>
                 <div class="flex justify-center items-center px-2">
                     <label>
-                        <input class="score3 w-8 h-8 text-center font-bold bg-gray-400" value="2" type="tel" disabled>
+                        <input class="score3 w-8 h-8 text-center font-bold bg-gray-400" disabled type="tel" value="2">
                     </label>
                 </div>
                 <div class="flex justify-center items-center text-lg px-2">
                     Allemagne
                 </div>
                 <div class="flex justify-center items-center px-2">
-                    <img class="w-8 h-8 rounded-full" src="img/drapeaux/Allemagne.png" alt="">
+                    <img alt="" class="w-8 h-8 rounded-full" src="img/drapeaux/Allemagne.png">
                 </div>
             </div>
             <div class="flex justify-center items-center text-sm">
@@ -204,8 +220,8 @@
                 Marseille
             </div>
             <div class="flex justify-center col-span-7 text-sm mt-4">
-                <button id="btn-modif-3" class="bg-gray-100 font-bold py-2 px-4 inline-flex items-center z-50">
-                    <img src="./img/icon-modif.svg" class="w-6 h-6 mr-2">
+                <button class="bg-gray-100 font-bold py-2 px-4 inline-flex items-center z-50" id="btn-modif-3">
+                    <img class="w-6 h-6 mr-2" src="./img/icon-modif.svg">
                     <span>Modifier</span>
                 </button>
             </div>
@@ -214,26 +230,26 @@
         <div class="text-gray-900 m-5 p-5 bg-white">
             <div class="md:flex justify-center items-center">
                 <div class="flex justify-center items-center px-2">
-                    <img class="w-8 h-8 rounded-full" src="img/drapeaux/France.png" alt="">
+                    <img alt="" class="w-8 h-8 rounded-full" src="img/drapeaux/France.png">
                 </div>
                 <div class="flex justify-center items-center text-lg px-2">
                     France
                 </div>
                 <div class="flex justify-center items-center px-2 md:pb-0 pb-2">
                     <label>
-                        <input class="score4 w-8 h-8 text-center font-bold bg-gray-400" value="2" type="tel" disabled>
+                        <input class="score4 w-8 h-8 text-center font-bold bg-gray-400" disabled type="tel" value="2">
                     </label>
                 </div>
                 <div class="flex justify-center items-center px-2">
                     <label>
-                        <input class="score4 w-8 h-8 text-center font-bold bg-gray-400" value="2" type="tel" disabled>
+                        <input class="score4 w-8 h-8 text-center font-bold bg-gray-400" disabled type="tel" value="2">
                     </label>
                 </div>
                 <div class="flex justify-center items-center text-lg px-2">
                     Allemagne
                 </div>
                 <div class="flex justify-center items-center px-2">
-                    <img class="w-8 h-8 rounded-full" src="img/drapeaux/Allemagne.png" alt="">
+                    <img alt="" class="w-8 h-8 rounded-full" src="img/drapeaux/Allemagne.png">
                 </div>
             </div>
             <div class="flex justify-center items-center text-sm">
@@ -243,8 +259,8 @@
                 Marseille
             </div>
             <div class="flex justify-center col-span-7 text-sm mt-4">
-                <button id="btn-modif-4" class="bg-gray-100 font-bold py-2 px-4 inline-flex items-center z-50">
-                    <img src="./img/icon-modif.svg" class="w-6 h-6 mr-2">
+                <button class="bg-gray-100 font-bold py-2 px-4 inline-flex items-center z-50" id="btn-modif-4">
+                    <img class="w-6 h-6 mr-2" src="./img/icon-modif.svg">
                     <span>Modifier</span>
                 </button>
             </div>
@@ -255,25 +271,27 @@
 <!-- CGU/Mentions légales -->
 <footer class="mt-6 z-0">
     <div class="w-full mx-auto container md:p-6 p-4 md:flex md:items-center md:justify-between">
-      <span class="text-sm text-white sm:text-center opacity-80">© 2023 <a target="_blank" href="https://www.mediametrie.fr/fr" class="hover:underline">Médiamétrie</a>
+      <span class="text-sm text-white sm:text-center opacity-80">© 2023 <a class="hover:underline"
+                                                                           href="https://www.mediametrie.fr/fr"
+                                                                           target="_blank">Médiamétrie</a>
     </span>
         <ul class="flex flex-wrap items-center mt-3 text-sm text-white opacity-80 sm:mt-0">
             <li>
-                <span onclick="displayModal()" class="mr-4 hover:underline md:mr-6 hover:cursor-pointer">Cookies</span>
+                <span class="mr-4 hover:underline md:mr-6 hover:cursor-pointer" onclick="displayModal()">Cookies</span>
             </li>
             <li>
-                <a href="#" class="mr-4 hover:underline md:mr-6">Mentions légales</a>
+                <a class="mr-4 hover:underline md:mr-6" href="#">Mentions légales</a>
             </li>
             <li>
-                <a href="#" class="mr-4 hover:underline md:mr-6">C.G.U</a>
+                <a class="mr-4 hover:underline md:mr-6" href="#">C.G.U</a>
             </li>
 
         </ul>
     </div>
 </footer>
 
-<script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
-<script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 <script src="https://unpkg.com/flowbite@1.4.4/dist/flowbite.js"></script>
 <script src="script.js"></script>
