@@ -19,9 +19,13 @@ module.exports = {
         'mediametrie': ['Mediametrie', 'sans-serif'],
       },
       screens: {
+        'xs' : '450px',
         'sm': '600px',
         'lg': '1250px',
         'md': '900px'
+      },
+      fontSize: {
+        'xxs': '0.625rem'
       }
     },
   },

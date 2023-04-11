@@ -63,15 +63,14 @@
                 <img alt="" class="w-7" src="img/icon-menu.svg">
             </button>
         </div>
-        <div class="hidden md:flex flex-col md:flex-row md:ml-auto mt-3 md:mt-0" id="navbar-collapse">
+        <div class="hidden md:flex flex-col md:flex-row md:ml-auto mt-3 md:mt-0 bg-black/50 md:bg-transparent" id="navbar-collapse">
             <a class="p-2 lg:px-4 md:mx-2 transition-colors duration-300" href="poules.html">En ce moment</a>
             <a class="p-2 lg:px-4 md:mx-2 transition-colors duration-300" href="matchs-passés.html">Matchs passés</a>
             <a class="p-2 lg:px-4 md:mx-2 transition-colors duration-300" href="classement.html">Classement</a>
             <a class="p-2 lg:px-4 md:mx-2 transition-colors duration-300 text-gold" href="bonus.html">Bonus</a>
             <a class="p-2 lg:px-4 md:mx-2 text-red-500 font-bold" href="règles.html">Règles du jeu</a>
-            <button class="hidden md:block flex items-center p-2 lg:px-3 md:mx-2" data-dropdown-toggle="dropdown"
-                    id="dropdownDefaultButton" type="button"><img class="w-7"
-                                                                                                     src="img/icon-user.svg">
+            <button class="md:block flex items-center p-2 lg:px-3 md:mx-2 order-first md:order-none" data-dropdown-toggle="dropdown"
+                    id="dropdownDefaultButton" type="button"><img class="w-7" src="img/icon-user.svg">
             </button>
             <!-- Dropdown menu -->
             <div class="z-10 hidden bg-white divide-y divide-gray-100 w-44" id="dropdown">
@@ -146,15 +145,15 @@
         <div class="bg-white p-4 my-5 flex-col justify-center items-center">
             Vous devez valider votre pronostic pour chaque match au plus tard 30 minutes avant le début de chaque match.
             Cela signifie que vous avez jusqu'à ce moment-là pour déterminer votre pronostic et le soumettre.
-            <p class="my-2 ">Les points à gagner pour la phase finale sont les suivants : </p>
-            <table class="border m-4">
+            <p class="my-4 ">Les points à gagner pour la phase finale sont les suivants : </p>
+            <table class="border md:text-base xs:text-sm text-xs  mx-auto">
                 <thead>
                 <tr class="py-3 bg-gray-100">
-                    <th class="px-2"></th>
-                    <th class="px-2">Quarts de finale</th>
-                    <th class="px-2">Demi-finale</th>
-                    <th class="px-2">Petite finale</th>
-                    <th class="px-2">Finale</th>
+                    <th class="sm:px-2"></th>
+                    <th class="sm:px-2">Quarts de finale</th>
+                    <th class="sm:px-2">Demi-finale</th>
+                    <th class="sm:px-2">Petite finale</th>
+                    <th class="sm:px-2">Finale</th>
                 </tr>
                 </thead>
                 <tbody class="text-center">
@@ -190,18 +189,16 @@
             </table>
             <p class="my-2 font-bold text-red-500">!! Les points peuvent être cumulés !!</p>
         </div>
-        <div class="text-white flex items-center justify-center text-lg font-bold py-2 mt-4">
+        <div class="text-white flex items-center justify-center text-lg font-bold py-4 mt-4">
             Score
         </div>
-        <div class="bg-white p-4 my-5 flex justify-center items-center">
-            Vous autorisez un score en fonction de la précision de vos prédictions. Plus vos pronostics sont précis,
-            plus votre score sera élevé. Vous pourrez voir votre score à la fin des phases de poules et cela vous
-            permettra de savoir à quel point vos usuels étaient justes.
+        <div class="bg-white p-4  flex justify-center items-center">
+            Plus vos pronostics sont précis, plus votre score sera élevé. Vous pourrez voir votre score à la fin de chaque phase et cela vous permettra de voir à quel point vos pronostics étaient justes.
         </div>
-        <div class="text-white flex items-center justify-center text-lg font-bold py-2 mt-4">
+        <div class="text-white flex items-center justify-center text-lg font-bold py-4 mt-4">
             Pronostic bonus
         </div>
-        <div class="bg-white p-4 my-5 flex-col justify-center items-center">
+        <div class="bg-white p-4  flex-col justify-center items-center">
             <p>En plus de donner vos pronostics pour la phase de poule et la phase finale, vous pourrez également
                 pronostiquer sur certains aspects de la compétition qui ne sont pas directement liés aux matchs.</p>
             <p class="my-2">Les pronostics bonus sont les suivants :</p>
@@ -242,22 +239,23 @@
 
 <!-- CGU/Mentions légales -->
 <footer class="mt-6 z-0">
-    <div class="w-full mx-auto container md:p-6 p-4 md:flex md:items-center md:justify-between">
-      <span class="text-sm text-white sm:text-center opacity-80">© 2023 <a class="hover:underline"
-                                                                           href="https://www.mediametrie.fr/fr"
-                                                                           target="_blank">Médiamétrie</a>
-    </span>
-        <ul class="flex flex-wrap items-center mt-3 text-sm text-white opacity-80 sm:mt-0">
+    <div class="w-full mx-auto container md:p-6 p-4 md:flex md:items-center md:justify-end">
+        <ul class="flex flex-wrap justify-end items-center mt-3 text-xxs xs:text-sm text-white opacity-80 sm:mt-0">
             <li>
-                <span class="mr-4 hover:underline md:mr-6 hover:cursor-pointer" onclick="displayModal()">Cookies</span>
+                <span class=" text-white sm:text-center mr-1 md:mr-6">© 2023 <a class="hover:underline"
+                                                                                                   href="https://www.mediametrie.fr/fr"
+                                                                                                   target="_blank">Médiamétrie</a>
+                </span>
             </li>
             <li>
-                <a class="mr-4 hover:underline md:mr-6" href="#">Mentions légales</a>
+                <span class="mr-1 hover:underline md:mr-6 hover:cursor-pointer" onclick="displayModal()">Cookies</span>
             </li>
             <li>
-                <a class="mr-4 hover:underline md:mr-6" href="#">C.G.U</a>
+                <a class="mr-1 hover:underline md:mr-6" href="#">Mentions légales</a>
             </li>
-
+            <li>
+                <a class="mr-1 hover:underline md:mr-6" href="#">C.G.U</a>
+            </li>
         </ul>
     </div>
 </footer>
