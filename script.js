@@ -214,6 +214,8 @@ function modifierBonus() {
         const bonus = document.getElementsByClassName("bonus");
         for (let index = 0; index < bonus.length; index++) {
             bonus[index].disabled = false;
+            bonus[index].classList.remove("bg-gray-200");
+            bonus[index].classList.add("bg-white");
         }
     }
     else if (modeModification === true) {
@@ -225,6 +227,8 @@ function modifierBonus() {
         const bonus = document.getElementsByClassName("bonus");
         for (let index = 0; index < bonus.length; index++) {
             bonus[index].disabled = true;
+            bonus[index].classList.add("bg-gray-200");
+            bonus[index].classList.remove("bg-white");
         }
     }
 }
@@ -255,4 +259,18 @@ function afficheResultatsFinale(){
     resultatFinale.classList.add("underline");
     document.getElementById("resultat-poules").classList.add("hidden");
     document.getElementById("resultat-finale").classList.remove("hidden");
+}
+
+// Fonction sélection 4 équipes
+var expanded = false;
+
+function showCheckboxes() {
+    var checkboxes = document.getElementById("checkboxes");
+    if (!expanded) {
+        checkboxes.style.display = "block";
+        expanded = true;
+    } else {
+        checkboxes.style.display = "none";
+        expanded = false;
+    }
 }
