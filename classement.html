@@ -57,41 +57,39 @@
 
 <!-- HEADER -->
 <nav class=" md:bg-transparent  text-white">
-    <div class="px-4 mx-auto md:flex md:items-center">
-        <div class="flex justify-between items-center ">
-            <a class="font-bold text-xl text-indigo-600 p-4" href="https://www.mediametrie.fr/fr" target="_blank">
-                <img alt="Médiamétrie" class="md:w-40 w-32" src="img/logo.svg">
-            </a>
-            <button class="md:hidden" id="navbar-toggle">
-                <img alt="" class="w-7" src="img/icon-menu.svg">
-            </button>
+    <div class="mx-auto md:flex flex md:items-center justify-between grid grid-cols-3 md:grid-cols-5">
+        <button class="px-4 md:block flex items-center p-2 lg:px-3 md:mx-2 justify-end order-3 " data-dropdown-toggle="dropdown"
+                id="dropdownDefaultButton" type="button"><img class="w-7" src="img/icon-user.svg">
+        </button>
+        <a class="font-bold text-xl text-indigo-600 py-4 md:p-4 order-2 md:order-none" href="https://www.mediametrie.fr/fr" target="_blank">
+            <img alt="Médiamétrie" class="md:w-40 w-32" src="img/logo.svg">
+        </a>
+        <button class="px-4 md:hidden justify-start flex items-center order-1 md:order-none" id="navbar-toggle">
+            <img alt="" class="w-7" src="img/icon-menu.svg">
+        </button>
+        <div class="z-10 hidden bg-white divide-y divide-gray-100 w-44" id="dropdown">
+            <ul aria-labelledby="dropdownDefaultButton" class="text-center py-2 text-sm text-gray-900">
+                <li class="text-base font-bold">
+                    Plaqueur Agile 1
+                </li>
+                <li>
+                    88 pts
+                </li>
+                <li>
+                    Rang 56
+                </li>
+            </ul>
         </div>
-        <div class="hidden md:flex flex-col md:flex-row md:ml-auto mt-3 md:mt-0 bg-black/50 md:bg-transparent" id="navbar-collapse">
+        <div class="md:bg-transparent md:text-white text-gray-900 bg-gray-100 hidden md:flex flex-col md:flex-row md:ml-auto mt-3 md:mt-0 bg-black/50 col-span-3 order-4 md:order-none" id="navbar-collapse">
             <a class="p-2 lg:px-4 md:mx-2 transition-colors duration-300" href="poules.html">En ce moment</a>
             <a class="p-2 lg:px-4 md:mx-2 transition-colors duration-300" href="matchs-passés.html">Matchs passés</a>
             <a class="p-2 lg:px-4 md:mx-2 text-red-500 font-bold" href="classement.html">Classement</a>
             <a class="p-2 lg:px-4 md:mx-2 transition-colors duration-300 text-gold" href="bonus.html">Bonus</a>
             <a class="p-2 lg:px-4 md:mx-2 " href="règles.html">Règles du jeu</a>
-            <button class="md:block flex items-center p-2 lg:px-3 md:mx-2 order-first md:order-none" data-dropdown-toggle="dropdown"
-                    id="dropdownDefaultButton" type="button"><img class="w-7" src="img/icon-user.svg">
-            </button>
-            <!-- Dropdown menu -->
-            <div class="z-10 hidden bg-white divide-y divide-gray-100 w-44" id="dropdown">
-                <ul aria-labelledby="dropdownDefaultButton" class="text-center py-2 text-sm text-gray-900">
-                    <li class="text-base font-bold">
-                        Plaqueur Agile 1
-                    </li>
-                    <li>
-                        88 pts
-                    </li>
-                    <li>
-                        Rang 56
-                    </li>
-                </ul>
-            </div>
         </div>
     </div>
 </nav>
+
 
 <!-- INTRODUCTION  -->
 <div class="text-white flex justify-center items-center mb-10 flex-grow">
