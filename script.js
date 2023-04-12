@@ -1,7 +1,9 @@
+
+
 // Gestion de la popup Cookie
 const modal = document.getElementById("myModal");
 
-displayModal();
+//displayModal();
 
 function displayModal() {
     modal.style.display = "block";
