@@ -27,6 +27,11 @@ $(document).ready(function() {
         minimumResultsForSearch: -1
     });
 
+    $('.bonus-demi').on('select2:opening select2:closing', function( event ) {
+        const $searchfield = $(this).parent().find('.select2-search__field');
+        $searchfield.prop('disabled', true);
+    });
+
     $(".bonus-essai").select2({
         placeholder: "Sélectionner 1 équipe",
         allowClear: true,
