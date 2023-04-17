@@ -23,7 +23,8 @@ $(document).ready(function() {
         maximumSelectionLength: 4,
         templateResult: formatState,
         disabled : true,
-        language: "fr"
+        language: "fr",
+        minimumResultsForSearch: -1
     });
 
     $(".bonus-essai").select2({
@@ -31,7 +32,8 @@ $(document).ready(function() {
         allowClear: true,
         templateResult: formatState,
         disabled : true,
-        language: "fr"
+        language: "fr",
+        minimumResultsForSearch: -1
     });
 
     $(".bonus-realisateur").select2({
@@ -39,7 +41,8 @@ $(document).ready(function() {
         allowClear: true,
         templateResult: formatState,
         disabled : true,
-        language: "fr"
+        language: "fr",
+        minimumResultsForSearch: -1
     });
 
     $(".bonus-champion").select2({
@@ -47,7 +50,8 @@ $(document).ready(function() {
         allowClear: true,
         templateResult: formatState,
         disabled : true,
-        language: "fr"
+        language: "fr",
+        minimumResultsForSearch: -1
     });
 
 });
