@@ -6,7 +6,7 @@
     <title>Bonus</title>
     <link href="/img/favicon_mediametrie.png" rel="icon" type="image/png"/>
     <link href="css/output.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 </head>
 
 <body class="font-mediametrie min-h-screen flex flex-col">
@@ -112,54 +112,34 @@
                     Equipe championne
                 </h4>
             </div>
-            <div class="py-2 px-8">
-                <div class="flex justify-center">
-                    <div class="mb-3 xl:w-96">
-                        <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                               for="bonus-champion">Sélectionner 1
-                            équipe</label>
-                        <select class="bonus w-full py-2 border bg-gray-100" data-te-select-init disabled id="bonus-champion">
-                            <option value="0"></option>
-                            <option value="FR">France</option>
-                            <option value="EN">Angleterre</option>
-                            <option value="ME">Mexique</option>
-                            <option value="DA">Danemark</option>
-                            <option value="AL">Allemagne</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
+            <label class="flex justify-center my-4">
+                <select class="md:mx-12 bonus-champion w-3/4 md:w-4/5 bg-gray-100 text-sm">
+                    <option></option>
+                    <option value="Allemagne">Allemagne</option>
+                    <option value="France">France</option>
+                    <option value="Angleterre">Angleterre</option>
+                    <option value="Chili">Chili</option>
+                    <option value="Danemark">Danemark</option>
+                </select>
+            </label>
         </div>
+
         <!-- DEMI-FINALES -->
         <div class="bg-white ">
             <div class="pt-2 px-8">
-                <h4 class="md:text-lg font-semibold text-center border-b pb-2">
+                <h4 class="md:text-lg font-semibold text-center border-b pb-2 ">
                     Demi-finales
                 </h4>
             </div>
-                <div class="multiselect py-2 px-8">
-                    <div class="selectBox mb-3" onclick="showCheckboxes()">
-                        <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                               for="bonus-demi">Sélectionner 1
-                            équipe</label>
-                        <select id="bonus-demi" class="bonus w-full py-2 border bg-gray-100">
-                            <option></option>
-                        </select>
-                        <div class="overSelect"></div>
-                    </div>
-                    <div class="absolute p-2" id="checkboxes">
-                        <label class="" for="one">
-                            <input class="" type="checkbox" id="one" />Allemagne</label>
-                        <label for="two">
-                            <input type="checkbox" id="two" />France</label>
-                        <label for="three">
-                            <input type="checkbox" id="three" />Angleterre</label>
-                        <label for="four">
-                            <input type="checkbox" id="four" />Ecosse</label>
-
-                    </div>
-                </div>
-
+            <label class="flex justify-center my-4">
+                <select class="md:mx-12 bonus-demi w-3/4 md:w-4/5 bg-gray-100 text-sm" multiple="multiple">
+                    <option value="Allemagne">Allemagne</option>
+                    <option value="France">France</option>
+                    <option value="Angleterre">Angleterre</option>
+                    <option value="Chili">Chili</option>
+                    <option value="Danemark">Danemark</option>
+                </select>
+            </label>
         </div>
 
         <!-- MEILLEUR MARQUEUR D'ESSSAI -->
@@ -169,25 +149,18 @@
                     Meilleur marqueur d'essai
                 </h4>
             </div>
-            <div class="py-2 px-8">
-                <div class="flex justify-center">
-                    <div class="mb-3 xl:w-96">
-                        <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                               for="bonus-marqueur">Sélectionner 1
-                            équipe</label>
-                        <select class="bonus w-full py-2 border bg-gray-100" data-te-select-init disabled id="bonus-marqueur">
-                            <option value="0"></option>
-                            <option value="FR">France</option>
-                            <option value="EN">Angleterre</option>
-                            <option value="ME">Mexique</option>
-                            <option value="DA">Danemark</option>
-                            <option value="AL">Allemagne</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-
+            <label class="flex justify-center my-4">
+                <select class="md:mx-12 bonus-essai w-3/4 md:w-4/5 bg-gray-100 text-sm">
+                    <option></option>
+                    <option value="Allemagne">Allemagne</option>
+                    <option value="France">France</option>
+                    <option value="Angleterre">Angleterre</option>
+                    <option value="Chili">Chili</option>
+                    <option value="Danemark">Danemark</option>
+                </select>
+            </label>
         </div>
+
         <!-- MEILLEUR RÉALISATEUR -->
         <div class="bg-white ">
             <div class="pt-2 px-8">
@@ -195,23 +168,16 @@
                     Meilleur réalisateur
                 </h4>
             </div>
-            <div class="py-2 px-8">
-                <div class="flex justify-center">
-                    <div class="mb-3 xl:w-96">
-                        <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                               for="bonus-realisateur">Sélectionner 1
-                            équipe</label>
-                        <select class="bonus w-full py-2 border bg-gray-100" data-te-select-init disabled id="bonus-realisateur">
-                            <option value="0"></option>
-                            <option value="FR">France</option>
-                            <option value="EN">Angleterre</option>
-                            <option value="ME">Mexique</option>
-                            <option value="DA">Danemark</option>
-                            <option value="AL">Allemagne</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
+            <label class="flex justify-center my-4">
+                <select class="md:mx-12 bonus-realisateur w-3/4 md:w-4/5 bg-gray-100 text-sm">
+                    <option></option>
+                    <option value="Allemagne">Allemagne</option>
+                    <option value="France">France</option>
+                    <option value="Angleterre">Angleterre</option>
+                    <option value="Chili">Chili</option>
+                    <option value="Danemark">Danemark</option>
+                </select>
+            </label>
         </div>
     </div>
 </div>
@@ -254,6 +220,8 @@
 <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 <script src="https://unpkg.com/flowbite@1.4.4/dist/flowbite.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
 <script src="script.js"></script>
 </body>
 

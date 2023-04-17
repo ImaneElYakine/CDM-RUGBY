@@ -15,6 +15,52 @@ function hideModal() {
     document.body.style.overflow = 'visible';
 }
 
+// Selects et dropdowns pour la page bonus (librairie Select2)
+$(document).ready(function() {
+    $(".bonus-demi").select2({
+        placeholder: "Sélectionner 4 équipes",
+        allowClear: true,
+        maximumSelectionLength: 4,
+        templateResult: formatState,
+        disabled : true,
+        language: "fr"
+    });
+
+    $(".bonus-essai").select2({
+        placeholder: "Sélectionner 1 équipe",
+        allowClear: true,
+        templateResult: formatState,
+        disabled : true,
+        language: "fr"
+    });
+
+    $(".bonus-realisateur").select2({
+        placeholder: "Sélectionner 1 équipe",
+        allowClear: true,
+        templateResult: formatState,
+        disabled : true,
+        language: "fr"
+    });
+
+    $(".bonus-champion").select2({
+        placeholder: "Sélectionner 1 équipe",
+        allowClear: true,
+        templateResult: formatState,
+        disabled : true,
+        language: "fr"
+    });
+
+});
+
+function formatState (state) {
+    if (!state.id) {
+        return state.text;
+    }
+    const baseUrl = "/img/drapeaux/";
+    return $(
+        '<span class="flex"><img class="mr-2 w-6 h-6 rounded-full" src="' + baseUrl + '/' + state.element.value + '.png" class="img-flag" /> ' + state.text + '</span>'
+    );
+}
 
 // Gestion du menu toggle en mode smartphone
 let toggleBtn = document.querySelector("#navbar-toggle");
@@ -212,11 +258,10 @@ function modifierBonus() {
         document.getElementById('btn-icon').classList.add("hidden");
         document.getElementById("darken").classList.remove("hidden");
         const bonus = document.getElementsByClassName("bonus");
-        for (let index = 0; index < bonus.length; index++) {
-            bonus[index].disabled = false;
-            bonus[index].classList.remove("bg-gray-200");
-            bonus[index].classList.add("bg-white");
-        }
+        $(".bonus-demi").prop("disabled", false);
+        $(".bonus-essai").prop("disabled", false);
+        $(".bonus-realisateur").prop("disabled", false);
+        $(".bonus-champion").prop("disabled", false);
     }
     else if (modeModification === true) {
         modeModification = false;
@@ -225,11 +270,10 @@ function modifierBonus() {
         document.getElementById("darken").classList.add("hidden");
         document.getElementById('btn-icon').classList.remove("hidden");
         const bonus = document.getElementsByClassName("bonus");
-        for (let index = 0; index < bonus.length; index++) {
-            bonus[index].disabled = true;
-            bonus[index].classList.add("bg-gray-200");
-            bonus[index].classList.remove("bg-white");
-        }
+        $(".bonus-demi").prop("disabled", true);
+        $(".bonus-essai").prop("disabled", true);
+        $(".bonus-realisateur").prop("disabled", true);
+        $(".bonus-champion").prop("disabled", true);
     }
 }
 
@@ -261,16 +305,5 @@ function afficheResultatsFinale(){
     document.getElementById("resultat-finale").classList.remove("hidden");
 }
 
-// Fonction sélection 4 équipes
-var expanded = false;
 
-function showCheckboxes() {
-    var checkboxes = document.getElementById("checkboxes");
-    if (!expanded) {
-        checkboxes.style.display = "block";
-        expanded = true;
-    } else {
-        checkboxes.style.display = "none";
-        expanded = false;
-    }
-}
+
