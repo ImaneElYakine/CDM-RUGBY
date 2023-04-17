@@ -56,7 +56,7 @@ function formatState (state) {
     if (!state.id) {
         return state.text;
     }
-    const baseUrl = "/img/drapeaux/";
+    const baseUrl = "./img/drapeaux/";
     return $(
         '<span class="flex"><img class="mr-2 w-6 h-6 rounded-full" src="' + baseUrl + '/' + state.element.value + '.png" class="img-flag" /> ' + state.text + '</span>'
     );
