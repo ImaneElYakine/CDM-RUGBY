@@ -21,6 +21,7 @@ module.exports = {
       screens: {
         'xs' : '450px',
         'sm': '600px',
+        'ml' : '900px',
         'lg': '1250px',
         'md': '900px'
       },
@@ -29,5 +30,5 @@ module.exports = {
       }
     },
   },
-  plugins: [require("tw-elements/dist/plugin.cjs")],
+  plugins: [require("tw-elements/dist/plugin")]
 }
